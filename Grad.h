@@ -7,14 +7,14 @@ class Grad : public Student
 {
   private:
     int studentID;
-    std::string graduateType;
+    bool isTA;
+    std::string name, graduateType;
 
   public:
     Grad();
-    bool isTA();
-    bool isRA(); //Not needed?
+    bool isTeacherAssistant();
     bool isMasters();
-    virtual void print(); //Might be able to make a parent print function to be inherited
+    virtual void print();
     ~Grad();
 
 };

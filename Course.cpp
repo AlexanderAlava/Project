@@ -5,15 +5,19 @@
 using namespace std;
 
 Course::Course()
-{}
-
-bool Course::isGraduate()
 {
-  bool temp = true;
-  return temp;
+  cout << "What is the Course Name?" << endl;
+  cout << "Course Name: ";
+  cin >> courseName;
+  cout << "Course Name set to: " << courseName << endl;
+
+  cout << "What is the Course ID?" << endl;
+  cout << "Course ID: ";
+  cin >> courseID;
+  cout << "Course ID set to: " << courseID << endl;
 }
 
-bool Course::isUndergraduate()
+bool Course::isGraduate()
 {
   bool temp = true;
   return temp;
