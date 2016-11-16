@@ -8,10 +8,14 @@ Department::Department()
 {}
 
 int Department::getUniversityID()
-{}
+{
+  return universityID = 0;
+}
 
 int Department::getDepartmentID()
-{}
+{
+  return departmentID = 0;
+}
 
 void Department::setDepartmentID()
 {}

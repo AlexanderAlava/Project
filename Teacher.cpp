@@ -26,7 +26,7 @@ string Teacher::getType()
   {
     teacherType = "Lecturer";
   }
-  else if (isProfessor());
+  else if (isProfessor())
   {
     teacherType = "Professor";
   }

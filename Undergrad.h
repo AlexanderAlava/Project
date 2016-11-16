@@ -1,16 +1,19 @@
 #ifndef UNDERGRAD_H
 #define UNDERGRAD_H
+#include<string>
+#include"Student.h"
+
 
 class Undergrad : public Student
 {
   private:
     int studentID;
-    string classStanding;
+    std::string classStanding;
 
   public:
     Undergrad();
     void setStanding(); //Will need arguments
-    string getStanding();
+    std::string getStanding();
     void printUndergrad();
     ~Undergrad();
 

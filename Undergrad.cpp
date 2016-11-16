@@ -11,7 +11,9 @@ void Undergrad::setStanding()
 {}
 
 string Undergrad::getStanding()
-{}
+{
+  return classStanding = "";
+}
 
 void Undergrad::printUndergrad()
 {}

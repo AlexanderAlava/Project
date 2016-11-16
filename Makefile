@@ -22,7 +22,7 @@ Grad.o: Grad.cpp Grad.h
 	g++ -Wall -c Grad.cpp
 
 Department.o: Department.cpp Department.h
-	g++ -Wall -c Deparmtnet.cpp
+	g++ -Wall -c Department.cpp
 
 Course.o: Course.cpp Course.h
 	g++ -Wall -c Course.cpp

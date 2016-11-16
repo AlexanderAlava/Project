@@ -6,8 +6,8 @@ class Person
 {
   private:
     int universityID, birthDate;
-    std::string name = "";
-    std::string gender = "";
+    std::string name;
+    std::string gender;
 
   public:
     Person();
