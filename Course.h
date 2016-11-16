@@ -5,8 +5,8 @@
 class Course
 {
   private:
-    int departmentID, courseID, registeredStudents;
-    std::string courseName;
+    int departmentID, courseID, registeredStudents; // Do we need departmentID in here?
+    std::string courseName; // Why not using namespace?
 
   public:
     Course();

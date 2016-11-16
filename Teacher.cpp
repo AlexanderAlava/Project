@@ -32,7 +32,7 @@ string Teacher::getType()
   }
   else
   {
-    teacherType = "Uknown";
+    teacherType = "Unknown";
   }
 
   return teacherType;

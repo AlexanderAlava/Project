@@ -10,7 +10,7 @@ class Department
     Department();
     int getUniversityID();
     int getDepartmentID();
-    void setDepartmentID(); //Needs arguments
+    void setDepartmentID(int ID); //Needs arguments
     ~Department();
 
 };

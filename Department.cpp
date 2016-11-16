@@ -12,13 +12,19 @@ int Department::getUniversityID()
   return universityID = 0;
 }
 
+void Department::setDepartmentID(int ID)
+{
+    departmentID = ID;
+}
+
 int Department::getDepartmentID()
 {
   return departmentID = 0;
 }
 
-void Department::setDepartmentID()
-{}
+
 
 Department::~Department()
-{}
+{
+  // Empty body constructor //
+}

@@ -8,16 +8,16 @@ Grad::Grad()
 {
   int choice;
   cout << "Enter the student name." << endl;
-  cout << "Student Name: ";
+  cout << "Student name: ";
   cin >> name;
   cout << "Student name set to: " << name << endl;
 
-  cout << "Please enter the Student ID." << endl;
+  cout << "Please enter the student ID." << endl;
   cout << "Student ID: ";
   cin >> studentID;
   cout << "Student ID set to " << studentID << endl;
 
-  cout << "What type of Graduate Student?" << endl;
+  cout << "What type of graduate student?" << endl;
   cout << "1. Masters" << endl;
   cout << "2. Doctoral (PhD)" << endl;
   cin >> choice;
@@ -75,7 +75,7 @@ bool Grad::isMasters()
 
 void Grad::print()
 {
-  cout << "This is a Graduate student." << endl;
+  cout << "This is a graduate student." << endl;
 }
 
 Grad::~Grad()
