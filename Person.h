@@ -2,7 +2,6 @@
 #define PERSON_H
 #include<string>
 
-// Testing github //
 class Person
 {
   private:
