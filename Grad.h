@@ -7,7 +7,7 @@ class Grad : public Student
 {
   private:
     int studentID;
-    bool isTA;
+    bool isTA, isDoctoral;
     std::string name, graduateType;
 
   public:

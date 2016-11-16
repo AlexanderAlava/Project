@@ -17,10 +17,28 @@ Grad::Grad()
   cin >> studentID;
   cout << "Student ID set to " << studentID << endl;
 
-  cout << "What type of Graduate Student is this (Master, PhD)?";
-  cout << "Graduate type: ";
-  cin >> graduateType;
-  cout << "Graduate type set to: " << graduateType << endl;
+  cout << "What type of Graduate Student?" << endl;
+  cout << "1. Masters" << endl;
+  cout << "2. Doctoral (PhD)" << endl;
+  cin >> choice;
+  while(choice != 1 || choice != 2)
+  {
+    cout << "Invalid selection. Please enter 1 or 2: ";
+    cin >> choice;
+  }
+  switch (choice)
+  {
+    case 1:
+      isDoctoral = false;
+      graduateType = "Masters";
+      cout << "Student is now a " << graduateType << " student." << endl;
+      break;
+    case 2:
+      isDoctoral = true;
+      graduateType = "Doctoral";
+      cout << "Student is now a " << graduateType << " student." << endl;
+      break;
+  }
 
   cout << "Will this student be a: ";
   cout << "1. TA (Teacher Asssitant)" << endl;
@@ -52,8 +70,7 @@ bool Grad::isTeacherAssistant()
 
 bool Grad::isMasters()
 {
-  bool temp = true;
-  return temp;
+  return isDoctoral;
 }
 
 void Grad::print()
