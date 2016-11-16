@@ -8,13 +8,14 @@ class Undergrad : public Student
 {
   private:
     int studentID;
-    std::string classStanding;
+    std::string name, classStanding;
 
   public:
     Undergrad();
     void setStanding(); //Will need arguments
     std::string getStanding();
     virtual void print();
+    void enroll(int CourseID);
     ~Undergrad();
 
 };
