@@ -4,14 +4,14 @@
 class Course
 {
   private:
-    int departmentID, courseID registeredStudents;
+    int departmentID, courseID, registeredStudents;
 
   public:
     Course();
-    Boolean isGraduate();
-    Boolean isUndergraduate();
-    Boolean isTeacher();
-    Boolean isTA();
+    bool isGraduate();
+    bool isUndergraduate();
+    bool isTeacher();
+    bool isTA();
     char Grades(); //Needs argument? Possibly Student to pull grade for?
     void setCourseID(int);
     int getCourseID();

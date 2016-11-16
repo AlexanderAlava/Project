@@ -6,12 +6,13 @@ class Person
 {
   private:
     int universityID, birthDate;
-    string name, gender;
+    std::string name = "";
+    std::string gender = "";
 
   public:
     Person();
     ~Person();
-  
+
 };
 
 #endif

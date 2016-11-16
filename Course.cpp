@@ -7,16 +7,16 @@ using namespace std;
 Course::Course()
 {}
 
-Boolean Course::isGraduate()
+bool Course::isGraduate()
 {}
 
-Boolean Course::isUndergraduate()
+bool Course::isUndergraduate()
 {}
 
-Boolean Course::isTeacher()
+bool Course::isTeacher()
 {}
 
-Boolean Course::isTA()
+bool Course::isTA()
 {}
 
 char Course::Grades()

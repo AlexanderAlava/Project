@@ -7,13 +7,13 @@ using namespace std;
 Grad::Grad()
 {}
 
-Boolean Grad::isTA()
+bool Grad::isTA()
 {}
 
-Boolean Grad::isRA()
+bool Grad::isRA()
 {}
 
-Boolean Grad::isMasters()
+bool Grad::isMasters()
 {}
 
 void Grad::printGrad()

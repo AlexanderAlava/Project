@@ -9,9 +9,9 @@ class Grad : public Student
 
   public:
     Grad();
-    Boolean isTA();
-    Boolean isRA(); //Not needed?
-    Boolean isMasters();
+    bool isTA();
+    bool isRA(); //Not needed?
+    bool isMasters();
     void printGrad(); //Might be able to make a parent print function to be inherited
     ~Grad();
 

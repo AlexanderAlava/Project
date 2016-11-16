@@ -4,7 +4,7 @@
 class Undergrad : public Student
 {
   private:
-    int studentID
+    int studentID;
     string classStanding;
 
   public:

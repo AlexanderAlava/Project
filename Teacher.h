@@ -1,22 +1,24 @@
 #ifndef TEACHER_H
 #define TEACHER_H
+#include<string>
+#include"Person.h"
 
 class Teacher : public Person
 {
   private:
     int teacherID;
-    Bool lecturer;
-    Bool adjunct;
-    Bool professor;
-    string teacherType;
+    bool lecturer;
+    bool adjunct;
+    bool professor;
+    std::string teacherType;
 
   public:
     Teacher();
-    string getType(); //Needs arguments
+    std::string getType(); //Needs arguments
     void printTeacher(); //Might create a parent virtual function for use here
-    Boolean isLecturer();
-    Boolean isAdjunct();
-    Boolean isProfessor();
+    bool isLecturer();
+    bool isAdjunct();
+    bool isProfessor();
     void setTeacherID(int ID);
     int getTeacherID();
     ~Teacher();
