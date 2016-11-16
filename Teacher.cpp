@@ -38,8 +38,10 @@ string Teacher::getType()
   return teacherType;
 }
 
-void Teacher::printTeacher()
-{}
+void Teacher::print()
+{
+  cout << "This is a teacher." << endl;
+}
 
 bool Teacher::isLecturer()
 {

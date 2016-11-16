@@ -25,8 +25,10 @@ bool Grad::isMasters()
   return temp;
 }
 
-void Grad::printGrad()
-{}
+void Grad::print()
+{
+  cout << "This is a Graduate student." << endl;
+}
 
 Grad::~Grad()
 {}

@@ -14,7 +14,7 @@ class Undergrad : public Student
     Undergrad();
     void setStanding(); //Will need arguments
     std::string getStanding();
-    void printUndergrad();
+    virtual void print();
     ~Undergrad();
 
 };

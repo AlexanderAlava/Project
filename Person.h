@@ -11,6 +11,7 @@ class Person
 
   public:
     Person();
+    virtual void print();
     ~Person();
 
 };

@@ -15,7 +15,7 @@ class Teacher : public Person
   public:
     Teacher();
     std::string getType(); //Needs arguments
-    void printTeacher(); //Might create a parent virtual function for use here
+    virtual void print(); //Might create a parent virtual function for use here
     bool isLecturer();
     bool isAdjunct();
     bool isProfessor();

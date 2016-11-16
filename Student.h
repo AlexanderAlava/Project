@@ -11,6 +11,7 @@ class Student : public Person
     Student();
     void setCourse(); //Will need arguments
     void getCourse(); //Will need TYPE changed
+    virtual void print();
     ~Student();
 
 };

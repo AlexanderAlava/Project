@@ -15,8 +15,10 @@ string Undergrad::getStanding()
   return classStanding = "";
 }
 
-void Undergrad::printUndergrad()
-{}
+void Undergrad::print()
+{
+  cout << "This is an Undergrad student." << endl;
+}
 
 Undergrad::~Undergrad()
 {}
