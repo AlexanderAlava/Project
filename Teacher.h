@@ -5,6 +5,9 @@ class Teacher : public Person
 {
   private:
     int teacherID;
+    Bool lecturer;
+    Bool adjunct;
+    Bool professor;
     string teacherType;
 
   public:
@@ -14,7 +17,7 @@ class Teacher : public Person
     Boolean isLecturer();
     Boolean isAdjunct();
     Boolean isProfessor();
-    void setTeacherID(); //Needs arguments
+    void setTeacherID(int ID);
     int getTeacherID();
     ~Teacher();
 };
