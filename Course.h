@@ -14,7 +14,7 @@ class Course
     bool isTeacher();
     bool isTA();
     char Grades(); //Needs argument? Possibly Student to pull grade for?
-    void setCourseID(int);
+    void setCourseID(int ID);
     int getCourseID();
     ~Course();
 

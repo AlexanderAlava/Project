@@ -41,8 +41,10 @@ char Course::Grades()
   return temp;
 }
 
-void Course::setCourseID(int)
-{}
+void Course::setCourseID(int ID)
+{
+  courseID = ID;
+}
 
 int Course::getCourseID()
 {
@@ -50,4 +52,6 @@ int Course::getCourseID()
 }
 
 Course::~Course()
-{}
+{
+  // Empty body destructor //
+}
