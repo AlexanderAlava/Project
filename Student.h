@@ -4,7 +4,7 @@
 
 class Student : public Person
 {
-  private:
+  protected:
 
 
   public:

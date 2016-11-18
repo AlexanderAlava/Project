@@ -6,7 +6,7 @@
 class Teacher : public Person
 {
   private:
-    int teacherID;
+    int teacherID, age;
     bool lecturer;
     bool adjunct;
     bool professor;

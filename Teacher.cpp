@@ -10,6 +10,12 @@ Teacher::Teacher()
   cout << "\nPlease enter the ID of this teacher: ";
   cin >> teacherID;
 
+  cout << "Please enter teachers name: ";
+  cin >> name;
+
+  cout << "Please enter teachers age: ";
+  cin >> age;
+
   // Initializing all bool variables to false //
   lecturer = false;
   adjunct = false;

@@ -2,7 +2,9 @@
 // Change to test github //
 
 #include<iostream>
+#include<fstream>
 #include<stdio.h>
+#include<cstdlib>
 #include<string>
 #include<vector>
 #include"Person.h"
@@ -20,7 +22,52 @@ int main()
   char generalChoice;
   char studentChoice;
   vector <Person> universitySystem;
-  cout << "Welcome user!";
+  cout << "Welcome user!" << endl;
+
+//Some testing with reading from a file below. Uncomment if you want to test.
+/*
+  //Object of inputFileStream named inFile. Will handle file input.
+  ifstream inFile;
+  //Open the file
+  inFile.open("Teachers.txt");
+
+  //Check for errors when opening the file
+  if(inFile.fail())
+  {
+    cerr << "Error while opening Teachers.txt" << endl;
+    //Terminates the program unsuccesfully
+    exit(1);
+  }
+
+  string name;
+  inFile.seekg(0l); //Positions file-position pointer at begining of file
+  while(!inFile.eof()) //While not the end of file, loop.
+  {
+    //If statement that looks for the comma character. This was just a test.
+    //Can be used with some math to separate items that we need from the text file
+    if(inFile.get() == ',')
+    {
+      cout << "You got a comma" << endl;
+    }
+    else
+    {
+      cout << "No comma was read" << endl;
+    }
+  }
+
+  //close the file after done using
+  inFile.close();
+  */
+
+
+/* I tested the above to verify that I could read from a file and use a comma
+*  as the separator between items that we're looking for. Example, comma
+*  separates TeacherID,FullName,Age. In this order within the text file.
+*  The code is commented out above and can be tested by just uncommenting it.
+*  it works for the file I have included "Teachers.txt".
+*/
+
+
 
   do
   {
@@ -75,7 +122,6 @@ int main()
 
   }
   while (generalChoice);
-
 
 
 
