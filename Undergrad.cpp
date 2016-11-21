@@ -6,7 +6,7 @@ using namespace std;
 
 Undergrad::Undergrad(string a, string b, string c)
 {
-  cout << "Object created!\n";
+  cout << "Undergrad object created!\n";
 }
 
 void Undergrad::setStanding()

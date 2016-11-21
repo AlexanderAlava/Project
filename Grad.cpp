@@ -6,6 +6,9 @@ using namespace std;
 
 Grad::Grad(string a, string b, string c)
 {
+  cout << "Grad object created!\n";
+
+  /*
   int choice;
   cout << "Enter the student name." << endl;
   cout << "Student name: ";
@@ -60,7 +63,7 @@ Grad::Grad(string a, string b, string c)
       isTA = false;
       cout << "Student is now an RA." << endl;
       break;
-  }
+  }*/
 }
 
 bool Grad::isTeacherAssistant()
