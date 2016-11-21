@@ -24,51 +24,52 @@ int main()
   cout << "Welcome user!" << endl;
 
 
-  int i = 0;
-string test[100];
+  int h = 0, i = 0, j = 0;
+  string teachersArray[100];
+  string studentsArray[100];
+  string names[100];
+  string id[100];
+  string grad[100];
+  string standing[100];
 
-//Object of inputFileStream named inFile. Will handle file input.
-ifstream inAlex;
-//Open the file
-inAlex.open("Students.txt");
+  //Object of inputFileStream named inFile. Will handle file input.
+  ifstream inAlex;
+  //Open the file
+  inAlex.open("Students.txt");
 
-if(inAlex.fail())
-{
-  cerr << "Error while opening Students.txt" << endl;
-  //Terminates the program unsuccesfully
-  exit(1);
-}
+  if(inAlex.fail())
+  {
+    cerr << "Error while opening Students.txt" << endl;
+    //Terminates the program unsuccesfully
+    exit(1);
+  }
 
-inAlex.seekg(0l);
-while(!inAlex.eof())
-{
-  getline(inAlex, test[i], ',');
-  i++;
-}
+  inAlex.seekg(0l);
+  while(!inAlex.eof())
+  {
+    getline(inAlex, studentsArray[i], ',');
+    i++;
+  }
 
-/*
-cout << test[5] << endl;
-cout << test[0] << endl;
-cout << test [10] << endl;
-*/
+  inAlex.close();
 
-
-if (test[8] == "U")
-{
-  Undergrad a(test[0], test[4], test[12]);
-
-}
+  /*
+  cout << studentsArray[5] << endl;
+  cout << studentsArray[0] << endl;
+  cout << studentsArray [10] << endl;
+  */
 
 
-/*
-for (int j = 0; j < test.size(); j++)
-{
-  if (j < )
-}
-*/
+  if (studentsArray[8] == "U")
+  {
+    Undergrad a(studentsArray[0], studentsArray[4], studentsArray[12]);
 
-//Some testing with reading from a file below. Uncomment if you want to test.
-/*  int commaCounter = 0;
+  }
+
+
+
+
+  //Some testing with reading from a file below. Uncomment if you want to test.
   string name;
 
   string test2 ="";
@@ -93,41 +94,50 @@ for (int j = 0; j < test.size(); j++)
   }
 
   inFile.seekg(0l); //Positions file-position pointer at begining of file
-  while(!inFile.eof()) //While not the end of file, loop.
+
+  while(!inFile.eof())
+    {
+      getline(inFile, teachersArray[i], ',');
+      h++;
+    }
+
+  for(j = 0; j < i; j++) //While not the end of file, loop.
   {
     //If statement that looks for the comma character. This was just a test.
     //Can be used with some math to separate items that we need from the text file
-    if(commaCounter == 0)
-    {
-      cout << "You got the first comma" << endl;
-      getline(inFile,test2,',');
-      cout << "test2 string now contains: " << test2 << endl;
-      commaCounter++;
-    }
-    else if(commaCounter == 1)
-    {
-      cout << "You got the second comma" << endl;
-      getline(inFile,test3,',');
-      cout << "test3 string now contains " << test3 << endl;
-      commaCounter++;
-    }
-    else if(commaCounter == 2)
-    {
-      cout << "You got the third comma" << endl;
-      getline(inFile,test4,',');
-      cout << "test4 string now contains " << test4 << endl;
-      commaCounter++;
-    }
-    else
-    {
-      cout << "Default" << endl;
-      break;
-    }
+    if(j >= 0 && j <= 3)
+      {
+        cout << "Index 0 - 3" << endl;
+        names[j] = studentsArray[j];
+        cout << "Stored " << names[j] << " at index " << j << " of names array";
+        cout << endl;
+      }
+      else if(j >= 4 && j <= 7)
+      {
+        cout << "Index 4 - 7" << endl;
+        id[j] = studentsArray[j];
+        cout << "Stored " << id[j] << " at index " << j << " of ID array";
+        cout << endl;
+      }
+      else if(j >= 8 && j <= 12)
+      {
+        cout << "Index 8 - 12" << endl;
+        grad[j] = studentsArray[j];
+        cout << "Stored " << grad[j] << " at index " << j << " of grad array";
+        cout << endl;
+      }
+      else
+      {
+        cout << "Index greater than 12" << endl;
+        standing[j] = studentsArray[j];
+        cout << "Stored " << standing[j] << " at index " << j << " of standing array";
+        cout << endl;
+      }
   }
 
   //close the file after done using
   inFile.close();
-*/
+
 
 /* I tested the above to verify that I could read from a file and use a comma
 *  as the separator between items that we're looking for. Example, comma
