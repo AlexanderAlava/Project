@@ -24,13 +24,12 @@ int main()
   cout << "Welcome user!" << endl;
 
 //Some testing with reading from a file below. Uncomment if you want to test.
-
+  int commaCounter = 0;
   string name;
 
-  string test = "Thi,s is a test";
   string test2 ="";
-
-
+  string test3 ="";
+  string test4 ="";
 
   //Object of inputFileStream named inFile. Will handle file input.
   ifstream inFile;
@@ -54,13 +53,31 @@ int main()
   {
     //If statement that looks for the comma character. This was just a test.
     //Can be used with some math to separate items that we need from the text file
-    if(inFile.get() == ',')
+    if(commaCounter == 0)
     {
-      cout << "You got a comma" << endl;
+      cout << "You got the first comma" << endl;
+      getline(inFile,test2,',');
+      cout << "test2 string now contains: " << test2 << endl;
+      commaCounter++;
+    }
+    else if(commaCounter == 1)
+    {
+      cout << "You got the second comma" << endl;
+      getline(inFile,test3,',');
+      cout << "test3 string now contains " << test3 << endl;
+      commaCounter++;
+    }
+    else if(commaCounter == 2)
+    {
+      cout << "You got the third comma" << endl;
+      getline(inFile,test4,',');
+      cout << "test4 string now contains " << test4 << endl;
+      commaCounter++;
     }
     else
     {
-      //cout << "No comma was read" << endl;
+      cout << "Default" << endl;
+      break;
     }
   }
 
