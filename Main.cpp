@@ -109,38 +109,38 @@ int main()
     //Can be used with some math to separate items that we need from the text file
     if(j >= 0 && j <= 3)
       {
-        cout << "Index 0 - 3" << endl;
+        //cout << "Index 0 - 3" << endl;
         names[j] = studentsArray[j];
-        cout << "Stored " << names[j] << " at index " << j << " of names array";
-        cout << endl;
+        //cout << "Stored " << names[j] << " at index " << j << " of names array";
+        //cout << endl;
       }
       else if(j >= 4 && j <= 7)
       {
-        cout << "Index 4 - 7" << endl;
-        id[j] = studentsArray[j];
-        cout << "Stored " << id[j] << " at index " << j << " of ID array";
-        cout << endl;
+        //cout << "Index 4 - 7" << endl;
+        id[j - 4] = studentsArray[j];
+        //cout << "Stored " << id[j] << " at index " << j << " of ID array";
+        //cout << endl;
       }
       else if(j >= 8 && j <= 12)
       {
-        cout << "Index 8 - 12" << endl;
-        grad[j] = studentsArray[j];
-        cout << "Stored " << grad[j] << " at index " << j << " of grad array";
-        cout << endl;
+        //cout << "Index 8 - 12" << endl;
+        grad[j - 8] = studentsArray[j];
+        //cout << "Stored " << grad[j] << " at index " << j << " of grad array";
+        //cout << endl;
       }
       else
       {
-        cout << "Index greater than 12" << endl;
-        standing[j] = studentsArray[j];
-        cout << "Stored " << standing[j] << " at index " << j << " of standing array";
-        cout << endl;
+        //cout << "Index greater than 12" << endl;
+        standing[j - 13] = studentsArray[j];
+        //cout << "Stored " << standing[j] << " at index " << j << " of standing array";
+        //cout << endl;
       }
   }
 
   //close the file after done using
   inFile.close();
 
-  for (int k = 0; k < 3; k++)
+  for (int k = 0; k <= 3; k++)
   {
     if (k == 0)
     {
