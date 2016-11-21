@@ -25,7 +25,11 @@ int main()
   cout << "Welcome user!" << endl;
 
 //Some testing with reading from a file below. Uncomment if you want to test.
-/*
+
+  string name;
+  int var1;
+  int var2;
+
   //Object of inputFileStream named inFile. Will handle file input.
   ifstream inFile;
   //Open the file
@@ -39,7 +43,6 @@ int main()
     exit(1);
   }
 
-  string name;
   inFile.seekg(0l); //Positions file-position pointer at begining of file
   while(!inFile.eof()) //While not the end of file, loop.
   {
@@ -51,13 +54,12 @@ int main()
     }
     else
     {
-      cout << "No comma was read" << endl;
+      //cout << "No comma was read" << endl;
     }
   }
 
   //close the file after done using
   inFile.close();
-  */
 
 
 /* I tested the above to verify that I could read from a file and use a comma
@@ -68,7 +70,7 @@ int main()
 */
 
 
-
+/*
   do
   {
     // Prompting for and reading in user input for choice //
@@ -122,7 +124,7 @@ int main()
 
   }
   while (generalChoice);
-
+*/
 
 
   //succesfull program termination
