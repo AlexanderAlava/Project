@@ -27,13 +27,19 @@ int main()
 
   string name;
 
-  string test = "This is a test";
+  string test = "Thi,s is a test";
+  string test2 ="";
+
 
 
   //Object of inputFileStream named inFile. Will handle file input.
   ifstream inFile;
   //Open the file
   inFile.open("Teachers.txt");
+
+  cout << "Testing getline" << endl;
+  getline(inFile,test2,',');
+  cout << "retrieved: " << test2 << endl;
 
   //Check for errors when opening the file
   if(inFile.fail())
