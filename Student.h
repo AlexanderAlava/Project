@@ -6,6 +6,7 @@ class Student : public Person
 {
   protected:
 
+  std::std::string courseEnrolled;
 
   public:
     Student();

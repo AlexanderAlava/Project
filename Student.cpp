@@ -7,11 +7,19 @@ using namespace std;
 Student::Student()
 {}
 
-void Student::setCourse()
-{}
+void Student::setCourse(string course)
+{
+  // Check if course already exists? //
+
+  courseEnrolled = course;
+
+  // Adding this student's name to the course object //
+}
 
 void Student::getCourse()
-{}
+{
+  return courseEnrolled;
+}
 
 void Student::print()
 {
