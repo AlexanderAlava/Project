@@ -19,16 +19,16 @@ using namespace std;
 
 int main()
 {
-  char generalChoice;
-  char studentChoice;
-  vector <Person> universitySystem;
+  //char generalChoice, studentChoice;
+  //vector <Person> universitySystem;
   cout << "Welcome user!" << endl;
 
 //Some testing with reading from a file below. Uncomment if you want to test.
 
   string name;
-  int var1;
-  int var2;
+
+  string test = "This is a test";
+
 
   //Object of inputFileStream named inFile. Will handle file input.
   ifstream inFile;

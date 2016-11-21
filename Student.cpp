@@ -16,7 +16,7 @@ void Student::setCourse(string course)
   // Adding this student's name to the course object //
 }
 
-void Student::getCourse()
+string Student::getCourse()
 {
   return courseEnrolled;
 }
