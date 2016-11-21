@@ -23,8 +23,35 @@ int main()
   //vector <Person> universitySystem;
   cout << "Welcome user!" << endl;
 
+
+  int i = 0;
+string test[100];
+
+//Object of inputFileStream named inFile. Will handle file input.
+ifstream inAlex;
+//Open the file
+inAlex.open("Students.txt");
+
+if(inAlex.fail())
+{
+  cerr << "Error while opening Teachers.txt" << endl;
+  //Terminates the program unsuccesfully
+  exit(1);
+}
+
+inAlex.seekg(0l);
+while(!inAlex.eof())
+{
+  getline(inAlex, test[i], ',');
+  i++;
+}
+
+cout << test[5] << endl;
+cout << test[0] << endl;
+cout << test [10] << endl;
+
 //Some testing with reading from a file below. Uncomment if you want to test.
-  int commaCounter = 0;
+/*  int commaCounter = 0;
   string name;
 
   string test2 ="";
@@ -83,7 +110,7 @@ int main()
 
   //close the file after done using
   inFile.close();
-
+*/
 
 /* I tested the above to verify that I could read from a file and use a comma
 *  as the separator between items that we're looking for. Example, comma
