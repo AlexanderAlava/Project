@@ -11,7 +11,7 @@ class Grad : public Student
     std::string name, graduateType;
 
   public:
-    Grad();
+    Grad(string a, string b, string c);
     bool isTeacherAssistant();
     bool isMasters();
     virtual void print();

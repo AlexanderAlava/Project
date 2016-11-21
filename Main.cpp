@@ -53,20 +53,22 @@ int main()
 
   inAlex.close();
 
+
+
   /*
   cout << studentsArray[5] << endl;
   cout << studentsArray[0] << endl;
   cout << studentsArray [10] << endl;
   */
 
-
+/*
   if (studentsArray[8] == "U")
   {
     Undergrad a(studentsArray[0], studentsArray[4], studentsArray[12]);
 
   }
 
-
+*/
 
 
   //Some testing with reading from a file below. Uncomment if you want to test.
@@ -137,6 +139,54 @@ int main()
 
   //close the file after done using
   inFile.close();
+
+  for (int k = 0; k < 3; k++)
+  {
+    if (k == 0)
+    {
+      if (grad[k] == "U")
+      {
+        Undergrad a(names[k], id[k], standing[k]);
+      }
+      else if(grad[k] == "G")
+      {
+        Grad a(names[k], id[k], standing[k]);
+      }
+    }
+    else if (k == 1)
+    {
+      if (grad[k] == "U")
+      {
+        Undergrad b(names[k], id[k], standing[k]);
+      }
+      else if(grad[k] == "G")
+      {
+        Grad b(names[k], id[k], standing[k]);
+      }
+    }
+    else if (k == 2)
+    {
+      if (grad[k] == "U")
+      {
+        Undergrad c(names[k], id[k], standing[k]);
+      }
+      else if(grad[k] == "G")
+      {
+        Grad c(names[k], id[k], standing[k]);
+      }
+    }
+    else if (k == 3)
+    {
+      if (grad[k] == "U")
+      {
+        Undergrad d(names[k], id[k], standing[k]);
+      }
+      else if(grad[k] == "G")
+      {
+        Grad d(names[k], id[k], standing[k]);
+      }
+    }
+  }
 
 
 /* I tested the above to verify that I could read from a file and use a comma

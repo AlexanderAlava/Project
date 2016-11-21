@@ -6,15 +6,7 @@ using namespace std;
 
 Undergrad::Undergrad(string a, string b, string c)
 {
-  cout << "Enter the student name." << endl;
-  cout << "Student Name: ";
-  cin >> name;
-  cout << "Student name set to: " << name << endl;
-
-  cout << "Please enter the Student ID." << endl;
-  cout << "Student ID: ";
-  cin >> studentID;
-  cout << "Student ID set to " << studentID << endl;
+  cout << "Object created!\n";
 }
 
 void Undergrad::setStanding()

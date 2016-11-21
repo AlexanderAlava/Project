@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Grad::Grad()
+Grad::Grad(string a, string b, string c)
 {
   int choice;
   cout << "Enter the student name." << endl;
