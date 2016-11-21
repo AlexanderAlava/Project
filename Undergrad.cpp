@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Undergrad::Undergrad()
+Undergrad::Undergrad(string a, string b, string c)
 {
   cout << "Enter the student name." << endl;
   cout << "Student Name: ";

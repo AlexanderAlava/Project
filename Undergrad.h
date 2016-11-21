@@ -11,7 +11,7 @@ class Undergrad : public Student
     std::string name, classStanding;
 
   public:
-    Undergrad();
+    Undergrad(string a, string b, string c);
     void setStanding(); //Will need arguments
     std::string getStanding();
     virtual void print();

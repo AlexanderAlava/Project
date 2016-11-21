@@ -34,7 +34,7 @@ inAlex.open("Students.txt");
 
 if(inAlex.fail())
 {
-  cerr << "Error while opening Teachers.txt" << endl;
+  cerr << "Error while opening Students.txt" << endl;
   //Terminates the program unsuccesfully
   exit(1);
 }
@@ -46,9 +46,26 @@ while(!inAlex.eof())
   i++;
 }
 
+/*
 cout << test[5] << endl;
 cout << test[0] << endl;
 cout << test [10] << endl;
+*/
+
+
+if (test[8] == "U")
+{
+  Undergrad a(test[0], test[4], test[12]);
+
+}
+
+
+/*
+for (int j = 0; j < test.size(); j++)
+{
+  if (j < )
+}
+*/
 
 //Some testing with reading from a file below. Uncomment if you want to test.
 /*  int commaCounter = 0;
