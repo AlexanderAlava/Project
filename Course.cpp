@@ -4,17 +4,13 @@
 
 using namespace std;
 
-Course::Course()
+Course::Course(string ID, string name)
 {
-  cout << "What is the Course Name?" << endl;
-  cout << "Course Name: ";
-  cin >> courseName;
-  cout << "Course Name set to: " << courseName << endl;
-
-  cout << "What is the Course ID?" << endl;
-  cout << "Course ID: ";
-  cin >> courseID;
-  cout << "Course ID set to: " << courseID << endl;
+  cout << "\nCourse object created!\n";
+  courseID = ID;
+  cout << "courseID = " << courseID << endl;
+  courseName = name;
+  cout << "courseName = " << courseName << endl;
 }
 
 bool Course::isGraduate()
@@ -41,14 +37,9 @@ char Course::Grades()
   return temp;
 }
 
-void Course::setCourseID(int ID)
+string Course::getCourseID()
 {
-  courseID = ID;
-}
-
-int Course::getCourseID()
-{
-  return courseID = 0;
+  return courseID = "NULL";
 }
 
 Course::~Course()

@@ -238,12 +238,12 @@ int main()
     }
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
-/*
-    for (k = 0, j = 0, m = 1, n = 2, p = 3; k <= 2; k++, j+=4, m+=4, n+=4, p+=4)
+
+    for (k = 0, j = 0, m = 1; k <= 6; k++, j+=2, m+=2)
     {
-      teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p]);
+      courseVec[k] = new Course(id[j], names[m]);
     }
-*/
+
 
   //succesfull program termination
   return 0;

@@ -1,1 +1,1 @@
-CS1,Intro_to_Programming,CS2,Programming_Concepts,CS3,Object_Oriented,CS4,Data_Structures,CA1,Computer_Organization,CA2,Computer_Logic,CA3,Computer_Architecture,
+CS1,Intro to Programming,CS2,Programming Concepts,CS3,Object Oriented,CS4,Data Structures,CA1,Computer Organization,CA2,Computer Logic,CA3,Computer Architecture,
