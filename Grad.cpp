@@ -14,7 +14,10 @@ Grad::Grad(string names, string IDs, string standing)
   {
     isTA = false;
   }
-  cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << graduateType << endl;
+  else
+  {
+    isTA = true;
+  }
 
   /*
   int choice;
