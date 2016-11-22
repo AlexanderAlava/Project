@@ -19,20 +19,34 @@ using namespace std;
 
 int main()
 {
-  //char generalChoice, studentChoice;
-  //vector <Person> universitySystem;
   cout << "Welcome user!" << endl;
 
+  vector <Student *> studentVec(5);
 
-  vector <Student *> studentVec(4);
+/* FIX ALL OF THE COMMENTS BEFORE SUBMITTING
+*  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
+*  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
+*  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
+*  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
+*  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
+*  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
+*  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
+*  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
+*  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
+*/
 
   int h = 0, i = 0, j = 0;
   string teachersArray[100];
   string studentsArray[100];
+  string coursesArray[100];
+  string departmentsArray[100];
   string names[100];
   string id[100];
   string grad[100];
   string standing[100];
+  string level[100];
+
+/*-----------------------STUDENT FILE HANDLING -------------------------------*/
 
   //Object of inputFileStream named inFile. Will handle file input.
   ifstream inStudent;
@@ -55,6 +69,8 @@ int main()
 
   inStudent.close();
 
+/*-----------------------TEACHER FILE HANDLING -------------------------------*/
+
   //Object of inputFileStream named inFile. Will handle file input.
   ifstream inTeacher;
   //Open the file
@@ -76,44 +92,107 @@ int main()
       h++;
     }
 
+    //close the file after done using
+    inTeacher.close();
+
+/*-----------------------COURSES FILE HANDLING -------------------------------*/
+
+    //Object of inputFileStream named inFile. Will handle file input.
+    ifstream inCourses;
+    //Open the file
+    inCourses.open("Courses.txt");
+
+    //Check for errors when opening the file
+    if(inCourses.fail())
+    {
+      cerr << "Error while opening Courses.txt" << endl;
+      //Terminates the program unsuccesfully
+      exit(1);
+    }
+
+    inCourses.seekg(0l); //Positions file-position pointer at begining of file
+
+    while(!inCourses.eof())
+      {
+        getline(inCourses, coursesArray[i], ',');
+        h++;
+      }
+
+      //close the file after done using
+      inCourses.close();
+
+/*-----------------------DEPARTMENTS FILE HANDLING ---------------------------*/
+
+      //Object of inputFileStream named inFile. Will handle file input.
+      ifstream inDepartments;
+      //Open the file
+      inDepartments.open("Departments.txt");
+
+      //Check for errors when opening the file
+      if(inDepartments.fail())
+      {
+        cerr << "Error while opening Departments.txt" << endl;
+        //Terminates the program unsuccesfully
+        exit(1);
+      }
+
+      inDepartments.seekg(0l); //Positions file-position pointer at begining of file
+
+      while(!inDepartments.eof())
+        {
+          getline(inDepartments, departmentsArray[i], ',');
+          h++;
+        }
+
+        //close the file after done using
+        inDepartments.close();
+
+/*-----------------------STUDENT ARRAY STORING -------------------------------*/
+
   for(j = 0; j < i; j++) //While not the end of file, loop.
   {
     //If statement that looks for the comma character. This was just a test.
     //Can be used with some math to separate items that we need from the text file
-    if(j >= 0 && j <= 3)
+    if(j >= 0 && j <= 4)
       {
         //cout << "Index 0 - 3" << endl;
         names[j] = studentsArray[j];
         //cout << "Stored " << names[j] << " at index " << j << " of names array";
         //cout << endl;
       }
-      else if(j >= 4 && j <= 7)
+      else if(j >= 5 && j <= 9)
       {
         //cout << "Index 4 - 7" << endl;
-        id[j - 4] = studentsArray[j];
+        id[j - 5] = studentsArray[j];
         //cout << "Stored " << id[j] << " at index " << j << " of ID array";
         //cout << endl;
       }
-      else if(j >= 8 && j <= 11)
+      else if(j >= 10 && j <= 14)
       {
         //cout << "Index 8 - 12" << endl;
-        grad[j - 8] = studentsArray[j];
-        //cout << "Stored " << grad[j-8] << " at index " << j << " of grad array";
+        grad[j - 10] = studentsArray[j];
+        //cout << "Stored " << grad[j-10] << " at index " << j << " of grad array";
         //cout << endl;
       }
-      else
+      else if(j >= 15 && j <= 19)
       {
         //cout << "Index greater than 11" << endl;
-        standing[j - 12] = studentsArray[j];
-        //cout << "Stored " << standing[j-12] << " at index " << j << " of standing array";
+        standing[j - 15] = studentsArray[j];
+        //cout << "Stored " << standing[j-13] << " at index " << j << " of standing array";
+        //cout << endl;
+      }
+      else if(j >= 20 && j <= 24)
+      {
+        //cout << "Index greater than 11" << endl;
+        level[j - 20] = studentsArray[j];
+        //cout << "Stored " << level[j-20] << " at index " << j << " of level array";
         //cout << endl;
       }
   }
 
-  //close the file after done using
-  inTeacher.close();
+/*-----------------------STUDENT OBJECT CREATION------------------------------*/
 
-  for (int k = 0; k <= 3; k++)
+  for (int k = 0; k <= 4; k++)
   {
     if (grad[k] == "U")
     {
@@ -121,7 +200,7 @@ int main()
     }
     else if(grad[k] == "G")
     {
-      studentVec[k] = new Grad(names[k], id[k], standing[k]);
+      studentVec[k] = new Grad(names[k], id[k], standing[k], level[k]);
     }
   }
 

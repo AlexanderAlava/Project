@@ -7,12 +7,12 @@ class Grad : public Student
 {
   private:
     bool isTA, isDoctoral;
-    std::string name, studentID, graduateType;
+    std::string name, studentID, classStanding, level;
 
   public:
-    Grad(string names, string IDs, string standing);
+    Grad(string names, string IDs, string standing, string levels);
     bool isTeacherAssistant();
-    bool isMasters();
+    bool isPhD();
     virtual void print();
     ~Grad();
 
