@@ -24,6 +24,8 @@ int main()
   cout << "Welcome user!" << endl;
 
 
+  vector <Student *> studentVec(4);
+
   int h = 0, i = 0, j = 0;
   string teachersArray[100];
   string studentsArray[100];
@@ -142,49 +144,13 @@ int main()
 
   for (int k = 0; k <= 3; k++)
   {
-    if (k == 0)
+    if (grad[k] == "U")
     {
-      if (grad[k] == "U")
-      {
-        Undergrad a(names[k], id[k], standing[k]);
-      }
-      else if(grad[k] == "G")
-      {
-        Grad a(names[k], id[k], standing[k]);
-      }
+      studentVec[k] = new Undergrad(names[k], id[k], standing[k]);
     }
-    else if (k == 1)
+    else if(grad[k] == "G")
     {
-      if (grad[k] == "U")
-      {
-        Undergrad b(names[k], id[k], standing[k]);
-      }
-      else if(grad[k] == "G")
-      {
-        Grad b(names[k], id[k], standing[k]);
-      }
-    }
-    else if (k == 2)
-    {
-      if (grad[k] == "U")
-      {
-        Undergrad c(names[k], id[k], standing[k]);
-      }
-      else if(grad[k] == "G")
-      {
-        Grad c(names[k], id[k], standing[k]);
-      }
-    }
-    else if (k == 3)
-    {
-      if (grad[k] == "U")
-      {
-        Undergrad d(names[k], id[k], standing[k]);
-      }
-      else if(grad[k] == "G")
-      {
-        Grad d(names[k], id[k], standing[k]);
-      }
+      studentVec[k] = new Grad(names[k], id[k], standing[k]);
     }
   }
 
