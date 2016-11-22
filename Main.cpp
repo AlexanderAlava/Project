@@ -91,65 +91,65 @@ int main()
   inTeacher.seekg(0l); //Positions file-position pointer at begining of file
 
   while(!inTeacher.eof())
-    {
-      getline(inTeacher, teachersArray[h], ',');
-      h++;
-    }
+  {
+    getline(inTeacher, teachersArray[h], ',');
+    h++;
+  }
 
-    //close the file after done using
-    inTeacher.close();
+  //close the file after done using
+  inTeacher.close();
 
 /*-----------------------COURSES FILE HANDLING -------------------------------*/
 
-    //Object of inputFileStream named inFile. Will handle file input.
-    ifstream inCourses;
-    //Open the file
-    inCourses.open("Courses.txt");
+  //Object of inputFileStream named inFile. Will handle file input.
+  ifstream inCourses;
+  //Open the file
+  inCourses.open("Courses.txt");
 
-    //Check for errors when opening the file
-    if(inCourses.fail())
-    {
-      cerr << "Error while opening Courses.txt" << endl;
-      //Terminates the program unsuccesfully
-      exit(1);
-    }
+  //Check for errors when opening the file
+  if(inCourses.fail())
+  {
+    cerr << "Error while opening Courses.txt" << endl;
+    //Terminates the program unsuccesfully
+    exit(1);
+  }
 
-    inCourses.seekg(0l); //Positions file-position pointer at begining of file
+  inCourses.seekg(0l); //Positions file-position pointer at begining of file
 
-    while(!inCourses.eof())
-      {
-        getline(inCourses, coursesArray[g], ',');
-        g++;
-      }
+  while(!inCourses.eof())
+  {
+    getline(inCourses, coursesArray[g], ',');
+    g++;
+  }
 
-      //close the file after done using
-      inCourses.close();
+  //close the file after done using
+  inCourses.close();
 
 /*-----------------------DEPARTMENTS FILE HANDLING ---------------------------*/
 
-      //Object of inputFileStream named inFile. Will handle file input.
-      ifstream inDepartments;
-      //Open the file
-      inDepartments.open("Departments.txt");
+  //Object of inputFileStream named inFile. Will handle file input.
+  ifstream inDepartments;
+  //Open the file
+  inDepartments.open("Departments.txt");
 
-      //Check for errors when opening the file
-      if(inDepartments.fail())
-      {
-        cerr << "Error while opening Departments.txt" << endl;
-        //Terminates the program unsuccesfully
-        exit(1);
-      }
+  //Check for errors when opening the file
+  if(inDepartments.fail())
+  {
+    cerr << "Error while opening Departments.txt" << endl;
+    //Terminates the program unsuccesfully
+    exit(1);
+  }
 
-      inDepartments.seekg(0l); //Positions file-position pointer at begining of file
+  inDepartments.seekg(0l); //Positions file-position pointer at begining of file
 
-      while(!inDepartments.eof())
-        {
-          getline(inDepartments, departmentsArray[f], ',');
-          f++;
-        }
+  while(!inDepartments.eof())
+  {
+    getline(inDepartments, departmentsArray[f], ',');
+    f++;
+  }
 
-        //close the file after done using
-        inDepartments.close();
+  //close the file after done using
+  inDepartments.close();
 
 /*-----------------------STUDENT ARRAY STORING -------------------------------*/
 
@@ -210,39 +210,42 @@ int main()
 
 /*-----------------------TEACHER ARRAY STORING--------------------------------*/
 
-    for(j = 0, m = 1, n = 2, p = 3; p < h; j+=4, m+=4, n+=4, p+=4) //While not the end of file, loop.
-    {
-      names[j] = teachersArray[j];
-      id[m] = teachersArray[m];
-      age[n] = teachersArray[n];
-      level[p] = teachersArray[p];
+  for(j = 0, m = 1, n = 2, p = 3; p < h; j+=4, m+=4, n+=4, p+=4) //While not the end of file, loop.
+  {
+    names[j] = teachersArray[j];
+    id[m] = teachersArray[m];
+    age[n] = teachersArray[n];
+    level[p] = teachersArray[p];
 
-      cout << "names[" << j << "] = " << names[j] << " id[" << m << "] = " << id[m] << " age[" << n << "] = " << age[n] << " level[" << p << "] = " << level[p] << endl;
-    }
+    cout << "names[" << j << "] = " << names[j] << " id[" << m << "] = " << id[m] << " age[" << n << "] = " << age[n] << " level[" << p << "] = " << level[p] << endl;
+  }
 
 /*-----------------------TEACHER OBJECT CREATION------------------------------*/
 
-    for (k = 0, j = 0, m = 1, n = 2, p = 3; k <= 2; k++, j+=4, m+=4, n+=4, p+=4)
-    {
-      teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p]);
-    }
+  for (k = 0, j = 0, m = 1, n = 2, p = 3; k <= 2; k++, j+=4, m+=4, n+=4, p+=4)
+  {
+    teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p]);
+  }
 
 /*-----------------------COURSES ARRAY STORING--------------------------------*/
 
-    for(j = 0, m = 1; m < g; j+=2, m+=2) //While not the end of file, loop.
-    {
-      id[j] = coursesArray[j];
-      names[m] = coursesArray[m];
+  for(j = 0, m = 1; m < g; j+=2, m+=2) //While not the end of file, loop.
+  {
+    id[j] = coursesArray[j];
+    names[m] = coursesArray[m];
 
-      cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
-    }
+    cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
+  }
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
 
-    for (k = 0, j = 0, m = 1; k <= 6; k++, j+=2, m+=2)
-    {
-      courseVec[k] = new Course(id[j], names[m]);
-    }
+  for (k = 0, j = 0, m = 1; k <= 6; k++, j+=2, m+=2)
+  {
+    courseVec[k] = new Course(id[j], names[m]);
+  }
+
+/*-----------------------DEPARTMENT ARRAY STORING-----------------------------*/
+
 
 
   //succesfull program termination
