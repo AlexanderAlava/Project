@@ -7,7 +7,7 @@
 class Undergrad : public Student
 {
   private:
-    std::string name,studentID, classStanding;
+    std::string name,studentID, level;
 
   public:
     Undergrad(string names, string IDs, string standing);
