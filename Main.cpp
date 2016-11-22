@@ -212,7 +212,6 @@ int main()
 
     for(j = 0, m = 1, n = 2, p = 3; p < h; j+=4, m+=4, n+=4, p+=4) //While not the end of file, loop.
     {
-      cout << "h = " << h << endl;
       names[j] = teachersArray[j];
       id[m] = teachersArray[m];
       age[n] = teachersArray[n];
@@ -227,6 +226,24 @@ int main()
     {
       teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p]);
     }
+
+/*-----------------------COURSES ARRAY STORING--------------------------------*/
+
+    for(j = 0, m = 1; m < g; j+=2, m+=2) //While not the end of file, loop.
+    {
+      id[j] = coursesArray[j];
+      names[m] = coursesArray[m];
+
+      cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
+    }
+
+/*-----------------------COURSES OBJECT CREATION------------------------------*/
+/*
+    for (k = 0, j = 0, m = 1, n = 2, p = 3; k <= 2; k++, j+=4, m+=4, n+=4, p+=4)
+    {
+      teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p]);
+    }
+*/
 
   //succesfull program termination
   return 0;
