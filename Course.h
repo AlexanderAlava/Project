@@ -7,7 +7,7 @@ using namespace std;
 class Course
 {
   private:
-    int departmentID, registeredStudents; // Do we need departmentID in here?
+    int registeredStudents; // Do we need departmentID in here?
     string courseName; // Why not using namespace?
     string courseID;
 
