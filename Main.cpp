@@ -14,6 +14,7 @@
 #include"Grad.h"
 #include"Department.h"
 #include"Course.h"
+#define MAX 100
 
 using namespace std;
 
@@ -21,10 +22,10 @@ int main()
 {
   cout << "Welcome user!" << endl;
 
-  vector <Student *> studentVec(5);
-  vector <Teacher *> teacherVec(3);
-  vector <Course *> courseVec(5);
-  vector <Department *> departmentVec(5);
+  vector <Student *> studentVec(10);
+  vector <Teacher *> teacherVec(10);
+  vector <Course *> courseVec(10);
+  vector <Department *> departmentVec(10);
 
 /* FIX ALL OF THE COMMENTS BEFORE SUBMITTING
 *  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
@@ -39,16 +40,16 @@ int main()
 */
 
   int f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, m = 0, n = 0, p = 0;
-  string teachersArray[100];
-  string studentsArray[100];
-  string coursesArray[100];
-  string departmentsArray[100];
-  string names[100];
-  string id[100];
-  string grad[100];
-  string standing[100];
-  string level[100];
-  string age[100];
+  string teachersArray[MAX];
+  string studentsArray[MAX];
+  string coursesArray[MAX];
+  string departmentsArray[MAX];
+  string names[MAX];
+  string id[MAX];
+  string grad[MAX];
+  string standing[MAX];
+  string level[MAX];
+  string age[MAX];
 
 /*-----------------------STUDENT FILE HANDLING -------------------------------*/
 
@@ -239,14 +240,14 @@ int main()
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
 
-  for (k = 0, j = 0, m = 1; k <= 6; k++, j+=2, m+=2)
+  for (k = 0, j = 0, m = 1; k <= 9; k++, j+=2, m+=2)
   {
     courseVec[k] = new Course(id[j], names[m]);
   }
 
 /*-----------------------DEPARTMENT ARRAY STORING-----------------------------*/
 
-  for(j = 0, m = 1; m < g; j+=2, m+=2) //While not the end of file, loop.
+  for(j = 0, m = 1; m < f; j+=2, m+=2) //While not the end of file, loop.
   {
     id[j] = departmentsArray[j];
     names[m] = departmentsArray[m];
@@ -255,7 +256,7 @@ int main()
 
 /*----------------------DEPARTMENT OBJECT CREATION----------------------------*/
 
-  for (k = 0, j = 0, m = 1; k <= 3; k++, j+=2, m+=2)
+  for (k = 0, j = 0, m = 1; k <= 9; k++, j+=2, m+=2)
   {
     departmentVec[k] = new Department(id[j], names[m]);
   }

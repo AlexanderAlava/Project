@@ -1,1 +1,1 @@
-CS1,Intro to Programming,CS2,Programming Concepts,CS3,Object Oriented,CS4,Data Structures,CA1,Computer Organization,CA2,Computer Logic,CA3,Computer Architecture,
+CS1,Intro to Programming,CS2,Programming Concepts,CS3,Object Oriented Design,CS4,Data Structures,CA1,Computer Organization,CA2,Computer Logic,CA3,Computer Architecture,MAP,Differential Equations,LIN,Language Culture and Film,HSC,Medical Terminology,
