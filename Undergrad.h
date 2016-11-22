@@ -7,11 +7,10 @@
 class Undergrad : public Student
 {
   private:
-    int studentID;
-    std::string name, classStanding;
+    std::string name,studentID, classStanding;
 
   public:
-    Undergrad(string a, string b, string c);
+    Undergrad(string names, string IDs, string standing);
     void setStanding(); //Will need arguments
     std::string getStanding();
     virtual void print();

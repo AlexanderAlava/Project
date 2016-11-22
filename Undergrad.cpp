@@ -4,17 +4,13 @@
 
 using namespace std;
 
-Undergrad::Undergrad(string a, string b, string c)
+Undergrad::Undergrad(string names, string IDs, string standing)
 {
   cout << "Undergrad object created!\n";
-}
-
-void Undergrad::setStanding()
-{
-  cout << "What is the class standing for this student?" << endl;
-  cout << "Class standing: ";
-  cin >> classStanding;
-  cout << "Class standing set to: " << classStanding << endl;
+  name = names;
+  studentID = IDs;
+  classStanding = standing;
+  //cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << classStanding << endl;
 }
 
 string Undergrad::getStanding()

@@ -74,20 +74,12 @@ int main()
 
 
   //Some testing with reading from a file below. Uncomment if you want to test.
-  string name;
 
-  string test2 ="";
-  string test3 ="";
-  string test4 ="";
 
   //Object of inputFileStream named inFile. Will handle file input.
   ifstream inFile;
   //Open the file
   inFile.open("Teachers.txt");
-
-  cout << "Testing getline" << endl;
-  getline(inFile,test2,',');
-  cout << "retrieved: " << test2 << endl;
 
   //Check for errors when opening the file
   if(inFile.fail())
@@ -123,18 +115,18 @@ int main()
         //cout << "Stored " << id[j] << " at index " << j << " of ID array";
         //cout << endl;
       }
-      else if(j >= 8 && j <= 12)
+      else if(j >= 8 && j <= 11)
       {
         //cout << "Index 8 - 12" << endl;
         grad[j - 8] = studentsArray[j];
-        //cout << "Stored " << grad[j] << " at index " << j << " of grad array";
+        //cout << "Stored " << grad[j-8] << " at index " << j << " of grad array";
         //cout << endl;
       }
       else
       {
-        //cout << "Index greater than 12" << endl;
-        standing[j - 13] = studentsArray[j];
-        //cout << "Stored " << standing[j] << " at index " << j << " of standing array";
+        //cout << "Index greater than 11" << endl;
+        standing[j - 12] = studentsArray[j];
+        //cout << "Stored " << standing[j-12] << " at index " << j << " of standing array";
         //cout << endl;
       }
   }

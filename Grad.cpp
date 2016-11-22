@@ -4,9 +4,17 @@
 
 using namespace std;
 
-Grad::Grad(string a, string b, string c)
+Grad::Grad(string names, string IDs, string standing)
 {
   cout << "Grad object created!\n";
+  name = names;
+  studentID = IDs;
+  graduateType = standing;
+  if (graduateType == "R")
+  {
+    isTA = false;
+  }
+  cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << graduateType << endl;
 
   /*
   int choice;
@@ -78,7 +86,9 @@ bool Grad::isMasters()
 
 void Grad::print()
 {
-  cout << "This is a graduate student." << endl;
+  cout << "The student name is: " << name << endl;
+  cout << "The student ID is: " << studentID << endl;
+  cout << "The student class standing is: " << graduateType << endl;
 }
 
 Grad::~Grad()

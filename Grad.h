@@ -6,12 +6,11 @@
 class Grad : public Student
 {
   private:
-    int studentID;
     bool isTA, isDoctoral;
-    std::string name, graduateType;
+    std::string name, studentID, graduateType;
 
   public:
-    Grad(string a, string b, string c);
+    Grad(string names, string IDs, string standing);
     bool isTeacherAssistant();
     bool isMasters();
     virtual void print();
