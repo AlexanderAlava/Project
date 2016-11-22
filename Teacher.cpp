@@ -4,22 +4,35 @@
 
 using namespace std;
 
-Teacher::Teacher()
+Teacher::Teacher(string names, string IDs, string old, string type)
 {
-  // Prompting for and reading in user input for teacherID //
-  cout << "\nPlease enter the ID of this teacher: ";
-  cin >> teacherID;
+  cout << "Teacher object created!\n";
+  name = names;
+  teacherID = IDs;
+  age = old;
+  teacherType = type;
 
-  cout << "Please enter teachers name: ";
-  cin >> name;
+  if(teacherType == "L")
+  {
+    lecturer = true;
+    adjunct = false;
+    professor = false;
+  }
+  else if(teacherType == "A")
+  {
+    lecturer = false;
+    adjunct = true;
+    professor = false;
+  }
+  else
+  {
+    lecturer = false;
+    adjunct = false;
+    professor = true;
+  }
 
-  cout << "Please enter teachers age: ";
-  cin >> age;
+  cout << "name = " << name << "\nteacherID = " << teacherID << "\nage = " << age << "\nteacherType = " << getType() << endl << endl;
 
-  // Initializing all bool variables to false //
-  lecturer = false;
-  adjunct = false;
-  professor = false;
 }
 
 string Teacher::getType()
@@ -51,42 +64,27 @@ void Teacher::print()
 
 bool Teacher::isLecturer()
 {
-  // Setting the other options as false and this one as true //
-  adjunct = false;
-  professor = false;
-  lecturer = true;
-
   return lecturer;
 }
 
 bool Teacher::isAdjunct()
 {
-   // Setting the other options as false and this one as true //
-  adjunct = true;
-  professor = false;
-  lecturer = false;
-
   return adjunct;
 }
 
 bool Teacher::isProfessor()
 {
-   // Setting the other options as false and this one as true //
-  adjunct = false;
-  professor = true;
-  lecturer = false;
-
   return professor;
 }
 
-void Teacher::setTeacherID(int ID)
+void Teacher::setTeacherID()
 {
-  teacherID = ID;
+
 }
 
 int Teacher::getTeacherID()
 {
-  return teacherID;
+  return 0;
 }
 
 Teacher::~Teacher()

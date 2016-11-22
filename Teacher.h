@@ -6,20 +6,19 @@
 class Teacher : public Person
 {
   private:
-    int teacherID, age;
     bool lecturer;
     bool adjunct;
     bool professor;
-    std::string teacherType;
+    std::string name, teacherID, teacherType, age;
 
   public:
-    Teacher();
+    Teacher(std::string names, std::string IDs, std::string old, std::string type);
     std::string getType(); //Needs arguments
     virtual void print(); //Might create a parent virtual function for use here
     bool isLecturer();
     bool isAdjunct();
     bool isProfessor();
-    void setTeacherID(int ID);
+    void setTeacherID();
     int getTeacherID();
     ~Teacher();
 };

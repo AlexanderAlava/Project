@@ -5,7 +5,7 @@
 class Person
 {
   protected:
-    int universityID, birthDate;
+    int universityID, age;
     std::string name;
     std::string gender;
 

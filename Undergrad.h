@@ -3,11 +3,10 @@
 #include<string>
 #include"Student.h"
 
-
 class Undergrad : public Student
 {
   private:
-    std::string name,studentID, classStanding, level;
+    std::string name, studentID, classStanding, level;
 
   public:
     Undergrad(string names, string IDs, string standing);

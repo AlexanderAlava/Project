@@ -22,6 +22,9 @@ int main()
   cout << "Welcome user!" << endl;
 
   vector <Student *> studentVec(5);
+  vector <Teacher *> teacherVec(3);
+  vector <Course *> courseVec(5);
+  vector <Department *> departmentVec(5);
 
 /* FIX ALL OF THE COMMENTS BEFORE SUBMITTING
 *  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
@@ -35,7 +38,7 @@ int main()
 *  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
 */
 
-  int h = 0, i = 0, j = 0;
+  int f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, m = 0, n = 0, p = 0;
   string teachersArray[100];
   string studentsArray[100];
   string coursesArray[100];
@@ -45,6 +48,7 @@ int main()
   string grad[100];
   string standing[100];
   string level[100];
+  string age[100];
 
 /*-----------------------STUDENT FILE HANDLING -------------------------------*/
 
@@ -88,7 +92,7 @@ int main()
 
   while(!inTeacher.eof())
     {
-      getline(inTeacher, teachersArray[i], ',');
+      getline(inTeacher, teachersArray[h], ',');
       h++;
     }
 
@@ -114,8 +118,8 @@ int main()
 
     while(!inCourses.eof())
       {
-        getline(inCourses, coursesArray[i], ',');
-        h++;
+        getline(inCourses, coursesArray[g], ',');
+        g++;
       }
 
       //close the file after done using
@@ -140,8 +144,8 @@ int main()
 
       while(!inDepartments.eof())
         {
-          getline(inDepartments, departmentsArray[i], ',');
-          h++;
+          getline(inDepartments, departmentsArray[f], ',');
+          f++;
         }
 
         //close the file after done using
@@ -192,7 +196,7 @@ int main()
 
 /*-----------------------STUDENT OBJECT CREATION------------------------------*/
 
-  for (int k = 0; k <= 4; k++)
+  for (k = 0; k <= 4; k++)
   {
     if (grad[k] == "U")
     {
@@ -204,6 +208,25 @@ int main()
     }
   }
 
+/*-----------------------TEACHER ARRAY STORING--------------------------------*/
+
+    for(j = 0, m = 1, n = 2, p = 3; p < h; j+=4, m+=4, n+=4, p+=4) //While not the end of file, loop.
+    {
+      cout << "h = " << h << endl;
+      names[j] = teachersArray[j];
+      id[m] = teachersArray[m];
+      age[n] = teachersArray[n];
+      level[p] = teachersArray[p];
+
+      cout << "names[" << j << "] = " << names[j] << " id[" << m << "] = " << id[m] << " age[" << n << "] = " << age[n] << " level[" << p << "] = " << level[p] << endl;
+    }
+
+/*-----------------------TEACHER OBJECT CREATION------------------------------*/
+
+    for (k = 0, j = 0, m = 1, n = 2, p = 3; k <= 2; k++, j+=4, m+=4, n+=4, p+=4)
+    {
+      teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p]);
+    }
 
   //succesfull program termination
   return 0;
