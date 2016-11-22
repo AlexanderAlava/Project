@@ -9,8 +9,8 @@ Undergrad::Undergrad(string names, string IDs, string standing)
   cout << "Undergrad object created!\n";
   name = names;
   studentID = IDs;
-  classStanding = standing;
-  //cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << classStanding << endl;
+  level = standing;
+  cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << classStanding << endl;
 }
 
 string Undergrad::getStanding()
