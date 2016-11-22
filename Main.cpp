@@ -246,7 +246,19 @@ int main()
 
 /*-----------------------DEPARTMENT ARRAY STORING-----------------------------*/
 
+  for(j = 0, m = 1; m < g; j+=2, m+=2) //While not the end of file, loop.
+  {
+    id[j] = departmentsArray[j];
+    names[m] = departmentsArray[m];
+  }
 
+
+/*----------------------DEPARTMENT OBJECT CREATION----------------------------*/
+
+  for (k = 0, j = 0, m = 1; k <= 3; k++, j+=2, m+=2)
+  {
+    departmentVec[k] = new Department(id[j], names[m]);
+  }
 
   //succesfull program termination
   return 0;

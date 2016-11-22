@@ -1,16 +1,16 @@
 #ifndef DEPARTMENT_H
 #define DEPARTMENT_H
 
+using namespace std;
+
 class Department
 {
   private:
-    int universityID, departmentID;
-
+    string departmentID;
+    string departmentName;
   public:
-    Department();
-    int getUniversityID();
-    int getDepartmentID();
-    void setDepartmentID(int ID); //Needs arguments
+    Department(string ID, string name);
+    string getDepartmentID();
     ~Department();
 
 };

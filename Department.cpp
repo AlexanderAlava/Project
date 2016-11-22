@@ -4,25 +4,22 @@
 
 using namespace std;
 
-Department::Department()
-{}
-
-int Department::getUniversityID()
+Department::Department(string ID, string name)
 {
-  return universityID = 0;
+  cout << "\nDepartment object created!\n";
+
+  departmentID = ID;
+  cout << "departmentID = " << departmentID << endl;
+
+  departmentName = name;
+  cout << "departmentName = " << departmentName << endl;
+
 }
 
-void Department::setDepartmentID(int ID)
+string Department::getDepartmentID()
 {
-    departmentID = ID;
+  return departmentID = "NULL";
 }
-
-int Department::getDepartmentID()
-{
-  return departmentID = 0;
-}
-
-
 
 Department::~Department()
 {
