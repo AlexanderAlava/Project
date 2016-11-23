@@ -267,6 +267,12 @@ int main()
     departmentVec[k] = new Department(id[j], names[m]);
   }
 
+
+  // TESTING TO PRINT TEACHER FROM VECTOR //
+  cout << "\n\n\n\nTEACHER OBJECT PRINTED FROM VECTOR\n\n";
+  teacherVec[0]->print();
+
+
   //succesfull program termination
   return 0;
 }

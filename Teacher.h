@@ -11,12 +11,13 @@ class Teacher : public Person
     bool lecturer;
     bool adjunct;
     bool professor;
-    std::string name, teacherID, teacherType, age;
+    string name, teacherID, teacherType, age;
 
   public:
     Teacher(string names, string IDs, string old, string type, string maleFemale);
     std::string getType(); //Needs arguments
     virtual void print(); //Might create a parent virtual function for use here
+    //void print(); //testing
     bool isLecturer();
     bool isAdjunct();
     bool isProfessor();

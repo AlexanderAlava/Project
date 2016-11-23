@@ -71,11 +71,6 @@ string Teacher::getType()
   return teacherType;
 }
 
-void Teacher::print()
-{
-  cout << "This is a teacher." << endl;
-}
-
 bool Teacher::isLecturer()
 {
   return lecturer;
@@ -101,12 +96,13 @@ int Teacher::getTeacherID()
   return 0;
 }
 
-/*void print()
+void Teacher::print()
 {
   cout << "\nPrinting a Teacher object!\n" << endl;
 
-  cout <<
-}*/
+  cout << "      Name      Gender     Age     ID      Type      \n";
+  cout << name << " \t " << gender << "  \t    " << age << "\t" << teacherID << "\t " << getType() << endl << endl;
+}
 
 Teacher::~Teacher()
 {
