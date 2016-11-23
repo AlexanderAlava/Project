@@ -100,6 +100,7 @@ void Teacher::print()
 {
   cout << "\nPrinting a Teacher object!\n" << endl;
 
+  // MUST FIX STYLING //
   cout << "      Name      Gender     Age     ID      Type      \n";
   cout << name << " \t " << gender << "  \t    " << age << "\t" << teacherID << "\t " << getType() << endl << endl;
 }
