@@ -18,7 +18,7 @@ Department::Department(string ID, string name)
 
 string Department::getDepartmentID()
 {
-  return departmentID = "NULL";
+  return departmentID;
 }
 
 Department::~Department()

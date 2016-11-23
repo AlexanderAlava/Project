@@ -18,19 +18,20 @@ class Course
     string courseName; // Why not using namespace?
     string courseID;
     string teacherName;
+    string level;
 
   public:
-    Course(string ID, string name);
+    Course(string ID, string name, string underGrad);
     bool isGraduate(); //Pass a Grad/Under object or just studentID to verify?
     bool isTeacher();
     bool isTA();
     char Grades(); //Needs argument? Possibly Student to pull grade for?
     string getCourseID();
-    //void setTeacher(Teacher &teacher);
-    //void setTA(Grad &ta);
+    void setTeacher(Teacher &teacher);
+    void setTA(Grad &ta);
     //void setStudents(Undergrad &student);
     ~Course();
-    void display(Teacher &t);
+    //void display(Teacher &t);
 
 };
 
