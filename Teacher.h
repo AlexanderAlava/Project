@@ -3,6 +3,8 @@
 #include<string>
 #include"Person.h"
 
+using namespace std;
+
 class Teacher : public Person
 {
   private:
@@ -12,7 +14,7 @@ class Teacher : public Person
     std::string name, teacherID, teacherType, age;
 
   public:
-    Teacher(std::string names, std::string IDs, std::string old, std::string type);
+    Teacher(string names, string IDs, string old, string type, string maleFemale);
     std::string getType(); //Needs arguments
     virtual void print(); //Might create a parent virtual function for use here
     bool isLecturer();

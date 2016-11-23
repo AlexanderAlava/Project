@@ -2,12 +2,14 @@
 #define PERSON_H
 #include<string>
 
+using namespace std;
+
 class Person
 {
   protected:
     int universityID, age;
-    std::string name;
-    std::string gender;
+    string name;
+    string gender;
 
   public:
     Person();

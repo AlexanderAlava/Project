@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Teacher::Teacher(string names, string IDs, string old, string type)
+Teacher::Teacher(string names, string IDs, string old, string type, string maleFemale)
 {
   cout << "Teacher object created!\n";
   name = names;
@@ -31,7 +31,21 @@ Teacher::Teacher(string names, string IDs, string old, string type)
     professor = true;
   }
 
-  cout << "name = " << name << "\nteacherID = " << teacherID << "\nage = " << age << "\nteacherType = " << getType() << endl << endl;
+  if (maleFemale == "M")
+  {
+    gender = "Male";
+  }
+  else if (maleFemale == "F")
+  {
+    gender = "Female";
+  }
+  else
+  {
+    gender = "Unknown";
+  }
+
+  cout << "name = " << name << "\nteacherID = " << teacherID << "\nage = " << age << "\nteacherType = " << getType() << "\ngender = " << gender << endl << endl;
+
 
 }
 
@@ -86,6 +100,13 @@ int Teacher::getTeacherID()
 {
   return 0;
 }
+
+/*void print()
+{
+  cout << "\nPrinting a Teacher object!\n" << endl;
+
+  cout <<
+}*/
 
 Teacher::~Teacher()
 {

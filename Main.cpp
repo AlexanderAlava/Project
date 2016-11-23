@@ -39,7 +39,7 @@ int main()
 *  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
 */
 
-  int f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, m = 0, n = 0, p = 0;
+  int f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, m = 0, n = 0, p = 0, r = 0;
   string teachersArray[MAX];
   string studentsArray[MAX];
   string coursesArray[MAX];
@@ -50,6 +50,7 @@ int main()
   string standing[MAX];
   string level[MAX];
   string age[MAX];
+  string gender[MAX];
 
 /*-----------------------STUDENT FILE HANDLING -------------------------------*/
 
@@ -211,21 +212,22 @@ int main()
 
 /*-----------------------TEACHER ARRAY STORING--------------------------------*/
 
-  for(j = 0, m = 1, n = 2, p = 3; p < h; j+=4, m+=4, n+=4, p+=4) //While not the end of file, loop.
+  for(j = 0, m = 1, n = 2, p = 3, r = 4; r < h; j+=5, m+=5, n+=5, p+=5,r+=5) //While not the end of file, loop.
   {
     names[j] = teachersArray[j];
     id[m] = teachersArray[m];
     age[n] = teachersArray[n];
     level[p] = teachersArray[p];
+    gender[r] = teachersArray[r];
 
     cout << "names[" << j << "] = " << names[j] << " id[" << m << "] = " << id[m] << " age[" << n << "] = " << age[n] << " level[" << p << "] = " << level[p] << endl;
   }
 
 /*-----------------------TEACHER OBJECT CREATION------------------------------*/
 
-  for (k = 0, j = 0, m = 1, n = 2, p = 3; k <= 9; k++, j+=4, m+=4, n+=4, p+=4)
+  for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4; k <= 9; k++, j+=5, m+=5, n+=5, p+=5, r+=5)
   {
-    teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p]);
+    teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p], gender[r]);
   }
 
 /*-----------------------COURSES ARRAY STORING--------------------------------*/
