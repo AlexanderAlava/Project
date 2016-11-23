@@ -9,7 +9,7 @@ class Undergrad : public Student
     std::string name, studentID, classStanding, level;
 
   public:
-    Undergrad(string names, string IDs, string standing);
+    Undergrad(string names, string IDs, string standing, string maleFemale);
     void setStanding(); //Will need arguments
     std::string getStanding();
     virtual void print();

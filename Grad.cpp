@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Grad::Grad(string names, string IDs, string standing, string levels)
+Grad::Grad(string names, string IDs, string standing, string levels, string maleFemale)
 {
   cout << "Grad object created!\n";
   name = names;
@@ -31,7 +31,20 @@ Grad::Grad(string names, string IDs, string standing, string levels)
     isDoctoral = false;
   }
 
-  cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << classStanding << "\nlevel = " << level << endl << endl;
+  if (maleFemale == "Ma")
+  {
+    gender = "Male";
+  }
+  else if (maleFemale == "Fe")
+  {
+    gender = "Female";
+  }
+  else
+  {
+    gender = "Unknown";
+  }
+
+  cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << classStanding << "\nlevel = " << level << "\ngender = " << gender << endl << endl;
 
   /*
   int choice;

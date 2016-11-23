@@ -194,6 +194,10 @@ int main()
         //cout << "Stored " << level[j-20] << " at index " << j << " of level array";
         //cout << endl;
       }
+      else
+      {
+        gender[j - 25] = studentsArray[j];
+      }
   }
 
 /*-----------------------STUDENT OBJECT CREATION------------------------------*/
@@ -202,11 +206,11 @@ int main()
   {
     if (grad[k] == "U")
     {
-      studentVec[k] = new Undergrad(names[k], id[k], standing[k]);
+      studentVec[k] = new Undergrad(names[k], id[k], standing[k], gender[k]);
     }
     else if(grad[k] == "G")
     {
-      studentVec[k] = new Grad(names[k], id[k], standing[k], level[k]);
+      studentVec[k] = new Grad(names[k], id[k], standing[k], level[k], gender[k]);
     }
   }
 

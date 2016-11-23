@@ -10,7 +10,7 @@ class Grad : public Student
     std::string name, studentID, classStanding, level;
 
   public:
-    Grad(string names, string IDs, string standing, string levels);
+    Grad(string names, string IDs, string standing, string levels, string maleFemale);
     bool isTeacherAssistant();
     bool isPhD();
     virtual void print();

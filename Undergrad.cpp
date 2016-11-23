@@ -4,14 +4,28 @@
 
 using namespace std;
 
-Undergrad::Undergrad(string names, string IDs, string standing)
+Undergrad::Undergrad(string names, string IDs, string standing, string maleFemale)
 {
   cout << "Undergrad object created!\n";
   name = names;
   studentID = IDs;
   classStanding = standing;
   level = "BSc";
-  cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << classStanding << "\nlevel = " << level << endl << endl;
+
+  if (maleFemale == "Ma")
+  {
+    gender = "Male";
+  }
+  else if (maleFemale == "Fe")
+  {
+    gender = "Female";
+  }
+  else
+  {
+    gender = "Unknown";
+  }
+
+  cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << classStanding << "\nlevel = " << level << "\ngender = " << gender << endl << endl;
 }
 
 string Undergrad::getStanding()
