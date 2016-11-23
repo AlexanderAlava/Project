@@ -7,6 +7,9 @@ using namespace std;
 
 class Teacher : public Person
 {
+  //Friend the ENTIRE Course class and all it's members
+  friend class Course;
+
   private:
     bool lecturer;
     bool adjunct;
@@ -24,6 +27,7 @@ class Teacher : public Person
     void setTeacherID();
     int getTeacherID();
     ~Teacher();
+
 };
 
 #endif

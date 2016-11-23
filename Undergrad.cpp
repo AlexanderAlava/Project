@@ -62,10 +62,14 @@ void Undergrad::print()
   cout << "The student level is: " << level << endl;
 }
 
-void Undergrad::enroll(int courseID)
+/*void Undergrad::enroll(Course &course, string CID)
 {
-
+  if(course.courseID == CID)
+  {
+    cout << "courseID == CID";
+  }
 }
+*/
 
 Undergrad::~Undergrad()
 {}

@@ -1,13 +1,17 @@
 #ifndef COURSE_H
 #define COURSE_H
 #include<string>
+#include"Grad.h"
+#include"Undergrad.h"
+#include"Grad.h"
+#include"Teacher.h"
 #define MAX 100
 
 using namespace std;
 
 class Course
 {
-  private:
+  protected:
     string studentNames[MAX];
     string assistantNames[MAX];
     string studentIDs[MAX];
@@ -22,10 +26,11 @@ class Course
     bool isTA();
     char Grades(); //Needs argument? Possibly Student to pull grade for?
     string getCourseID();
-    void setTeacher(Teacher &teacher);
-    void setTA(Grad &ta);
-    void setStudents(Undergrad &student);
+    //void setTeacher(Teacher &teacher);
+    //void setTA(Grad &ta);
+    //void setStudents(Undergrad &student);
     ~Course();
+    void display(Teacher &t);
 
 };
 

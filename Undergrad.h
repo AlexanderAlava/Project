@@ -2,6 +2,7 @@
 #define UNDERGRAD_H
 #include<string>
 #include"Student.h"
+#include"Course.h"
 
 class Undergrad : public Student
 {
@@ -13,7 +14,7 @@ class Undergrad : public Student
     void setStanding(); //Will need arguments
     std::string getStanding();
     virtual void print();
-    void enroll(int CourseID);
+    //void enroll(Course &course, string CID);
     ~Undergrad();
 
 };

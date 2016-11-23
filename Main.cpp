@@ -240,6 +240,11 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5; k <= 9; k++, j+=6, m+=6, n
   cout << "\n\n\n\nTEACHER OBJECT PRINTED FROM VECTOR\n\n";
   teacherVec[0]->print();
 
+  //This is running the friend DISPLAY function in Course class to access the private data variable NAME in Teacher class
+  cout << "\n\n\n TESTING DISPLAY FUNCTION IN COURSE CLASS:\n";
+  courseVec[0]->display(*teacherVec[0]);
+  cout << endl;
+
 
   //succesfull program termination
   return 0;
