@@ -39,7 +39,7 @@ int main()
 *  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
 */
 
-  int f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, m = 0, n = 0, p = 0, r = 0;
+  int f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, m = 0, n = 0, p = 0, r = 0, s = 0;
   string teachersArray[MAX];
   string studentsArray[MAX];
   string coursesArray[MAX];
@@ -155,64 +155,31 @@ int main()
 
 /*-----------------------STUDENT ARRAY STORING -------------------------------*/
 
-  for(j = 0; j < i; j++) //While not the end of file, loop.
+  for(j = 0, m = 1, n = 2, p = 3, r = 4, s = 5; s < i; j+=6, m+=6, n+=6, p+=6,r+=6,s+=6)
   {
-    //If statement that looks for the comma character. This was just a test.
-    //Can be used with some math to separate items that we need from the text file
-    if(j >= 0 && j <= 4)
-      {
-        //cout << "Index 0 - 3" << endl;
-        names[j] = studentsArray[j];
-        //cout << "Stored " << names[j] << " at index " << j << " of names array";
-        //cout << endl;
-      }
-      else if(j >= 5 && j <= 9)
-      {
-        //cout << "Index 4 - 7" << endl;
-        id[j - 5] = studentsArray[j];
-        //cout << "Stored " << id[j] << " at index " << j << " of ID array";
-        //cout << endl;
-      }
-      else if(j >= 10 && j <= 14)
-      {
-        //cout << "Index 8 - 12" << endl;
-        grad[j - 10] = studentsArray[j];
-        //cout << "Stored " << grad[j-10] << " at index " << j << " of grad array";
-        //cout << endl;
-      }
-      else if(j >= 15 && j <= 19)
-      {
-        //cout << "Index greater than 11" << endl;
-        standing[j - 15] = studentsArray[j];
-        //cout << "Stored " << standing[j-13] << " at index " << j << " of standing array";
-        //cout << endl;
-      }
-      else if(j >= 20 && j <= 24)
-      {
-        //cout << "Index greater than 11" << endl;
-        level[j - 20] = studentsArray[j];
-        //cout << "Stored " << level[j-20] << " at index " << j << " of level array";
-        //cout << endl;
-      }
-      else
-      {
-        gender[j - 25] = studentsArray[j];
-      }
+    names[j] = studentsArray[j];
+    id[m] = studentsArray[m];
+    grad[n] = studentsArray[n];
+    standing[p] = studentsArray[p];
+    level[r] = studentsArray[r];
+    gender[s] = studentsArray[s];
+
+    //cout << "names[" << j << "] = " << names[j] << " id[" << m << "] = " << id[m] << " grad[" << n << "] = " << grad[n] << " standing[" << p << "] = " << standing[p] << " level[" << r << "] = " << level[r] << " gender[" << s << "] = " << gender[s] << endl;
   }
 
 /*-----------------------STUDENT OBJECT CREATION------------------------------*/
 
-  for (k = 0; k <= 4; k++)
+for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5; k <= 9; k++, j+=6, m+=6, n+=6, p+=6,r+=6,s+=6)
+{
+  if (grad[n] == "U")
   {
-    if (grad[k] == "U")
-    {
-      studentVec[k] = new Undergrad(names[k], id[k], standing[k], gender[k]);
-    }
-    else if(grad[k] == "G")
-    {
-      studentVec[k] = new Grad(names[k], id[k], standing[k], level[k], gender[k]);
-    }
+    studentVec[k] = new Undergrad(names[j], id[m], standing[p], gender[s]);
   }
+  else if(grad[n] == "G")
+  {
+    studentVec[k] = new Grad(names[j], id[m], standing[p], level[r], gender[s]);
+  }
+}
 
 /*-----------------------TEACHER ARRAY STORING--------------------------------*/
 
@@ -224,7 +191,7 @@ int main()
     level[p] = teachersArray[p];
     gender[r] = teachersArray[r];
 
-    cout << "names[" << j << "] = " << names[j] << " id[" << m << "] = " << id[m] << " age[" << n << "] = " << age[n] << " level[" << p << "] = " << level[p] << endl;
+    //cout << "names[" << j << "] = " << names[j] << " id[" << m << "] = " << id[m] << " age[" << n << "] = " << age[n] << " level[" << p << "] = " << level[p] << endl;
   }
 
 /*-----------------------TEACHER OBJECT CREATION------------------------------*/
@@ -241,7 +208,7 @@ int main()
     id[j] = coursesArray[j];
     names[m] = coursesArray[m];
 
-    cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
+    //cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
   }
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
@@ -267,6 +234,7 @@ int main()
     departmentVec[k] = new Department(id[j], names[m]);
   }
 
+/*------------------------------TESTING---------------------------------------*/
 
   // TESTING TO PRINT TEACHER FROM VECTOR //
   cout << "\n\n\n\nTEACHER OBJECT PRINTED FROM VECTOR\n\n";

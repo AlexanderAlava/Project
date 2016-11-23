@@ -9,15 +9,21 @@ Grad::Grad(string names, string IDs, string standing, string levels, string male
   cout << "Grad object created!\n";
   name = names;
   studentID = IDs;
-  classStanding = standing;
 
-  if (classStanding == "R")
+  if (standing == "R")
   {
+    classStanding = "Research Assistant";
     isTA = false;
+  }
+  else if (standing == "T")
+  {
+    classStanding = "Teacher Assistant";
+    isTA = true;
   }
   else
   {
-    isTA = true;
+    classStanding = "Unknown";
+    isTA = false;
   }
 
   if(levels == "P")

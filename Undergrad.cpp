@@ -12,6 +12,27 @@ Undergrad::Undergrad(string names, string IDs, string standing, string maleFemal
   classStanding = standing;
   level = "BSc";
 
+  if(standing == "F")
+  {
+    classStanding = "Freshman";
+  }
+  else if(standing == "So")
+  {
+    classStanding = "Sophomore";
+  }
+  else if(standing == "J")
+  {
+    classStanding = "Junior";
+  }
+  else if(standing == "Se")
+  {
+    classStanding = "Senior";
+  }
+  else
+  {
+    classStanding = "Unknown";
+  }
+
   if (maleFemale == "Ma")
   {
     gender = "Male";
