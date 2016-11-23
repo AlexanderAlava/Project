@@ -6,6 +6,8 @@
 
 class Undergrad : public Student
 {
+  friend class Course;
+
   private:
     std::string name, studentID, classStanding, level;
 

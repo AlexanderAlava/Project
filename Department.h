@@ -12,7 +12,6 @@ class Department
     Department(string ID, string name);
     string getDepartmentID();
     ~Department();
-
 };
 
 #endif

@@ -204,19 +204,20 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5; k <= 9; k++, j+=6, m+=6, n
 
 /*-----------------------COURSES ARRAY STORING--------------------------------*/
 
-  for(j = 0, m = 1; m < g; j+=2, m+=2) //While not the end of file, loop.
+  for(j = 0, m = 1, n = 2; m < g; j+=3, m+=3, n+=3) //While not the end of file, loop.
   {
     id[j] = coursesArray[j];
     names[m] = coursesArray[m];
+    level[n] = coursesArray[n];
 
     //cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
   }
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
 
-  for (k = 0, j = 0, m = 1; k <= 9; k++, j+=2, m+=2)
+  for (k = 0, j = 0, m = 1, n = 2; k <= 9; k++, j+=3, m+=3, n+=3)
   {
-    courseVec[k] = new Course(id[j], names[m]);
+    courseVec[k] = new Course(id[j], names[m], level[n]);
   }
 
 /*-----------------------DEPARTMENT ARRAY STORING-----------------------------*/
@@ -242,7 +243,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5; k <= 9; k++, j+=6, m+=6, n
 
   //This is running the friend DISPLAY function in Course class to access the private data variable NAME in Teacher class
   cout << "\n\n\n TESTING DISPLAY FUNCTION IN COURSE CLASS:\n";
-  courseVec[0]->display(*teacherVec[0]);
+  //courseVec[0]->display(*teacherVec[0]);
   cout << endl;
 
 

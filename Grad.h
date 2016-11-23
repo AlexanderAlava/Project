@@ -5,6 +5,8 @@
 
 class Grad : public Student
 {
+  friend class Course;
+
   private:
     bool isTA, isDoctoral;
     std::string name, studentID, classStanding, level;
