@@ -26,6 +26,7 @@ int main()
   vector <Teacher *> teacherVec(10);
   vector <Course *> courseVec(10);
   vector <Department *> departmentVec(10);
+  vector <Person *> personVec(MAX);
 
 /* FIX ALL OF THE COMMENTS BEFORE SUBMITTING
 *  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
@@ -198,7 +199,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5; k <= 9; k++, j+=6, m+=6, n
 
   for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4; k <= 9; k++, j+=5, m+=5, n+=5, p+=5, r+=5)
   {
-    teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p], gender[r]);
+    personVec[k] = new Teacher(names[j], id[m], age[n], level[p], gender[r]);
   }
 
 /*-----------------------COURSES ARRAY STORING--------------------------------*/
@@ -238,8 +239,10 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5; k <= 9; k++, j+=6, m+=6, n
 
   // TESTING TO PRINT TEACHER FROM VECTOR //
   cout << "\n\n\n\nTEACHER OBJECT PRINTED FROM VECTOR\n\n";
-  teacherVec[0]->print();
 
+
+  personVec[0]->print();
+  //teacherVec[0]->print();
 
   //succesfull program termination
   return 0;
