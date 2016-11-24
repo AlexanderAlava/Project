@@ -3,13 +3,15 @@
 #include<string>
 #include"Student.h"
 
+using namespace std;
+
 class Grad : public Student
 {
   friend class Course;
 
   private:
     bool isTA, isDoctoral;
-    std::string name, studentID, classStanding, level;
+    string name, studentID, classStanding, level;
 
   public:
     Grad(string names, string IDs, string standing, string levels, string maleFemale);

@@ -98,11 +98,13 @@ int Teacher::getTeacherID()
 
 void Teacher::print()
 {
-  cout << "\nPrinting a Teacher object!\n" << endl;
-
-  // MUST FIX STYLING //
-  cout << "      Name      Gender     Age     ID      Type      \n";
-  cout << name << " \t " << gender << "  \t    " << age << "\t" << teacherID << "\t " << getType() << endl << endl;
+  cout << "\n";
+  cout << "The teacher name is: " << name << endl;
+  cout << "The teacher date of birth is: " << age << endl;
+  cout << "The teacher gender is: " << gender << endl;
+  cout << "The teacher ID is: " << teacherID << endl;
+  cout << "The teacher type is: " << getType() << endl;
+  cout << "\n";
 }
 
 Teacher::~Teacher()

@@ -15,7 +15,7 @@ class Course
     string studentNames[MAX];
     string assistantNames[MAX];
     string studentIDs[MAX];
-    string courseName; // Why not using namespace?
+    string courseName;
     string courseID;
     string teacherName;
     string level;
