@@ -44,7 +44,7 @@ Teacher::Teacher(string names, string IDs, string old, string type, string maleF
     gender = "Unknown";
   }
 
-  cout << "name = " << name << "\nteacherID = " << teacherID << "\nage = " << age << "\nteacherType = " << getType() << "\ngender = " << gender << endl << endl;
+  cout << "name = " << name << "\nteacherID = " << teacherID << "\ndate of birth = " << age << "\nteacherType = " << getType() << "\ngender = " << gender << endl << endl;
 
 
 }
