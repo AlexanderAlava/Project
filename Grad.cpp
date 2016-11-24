@@ -4,7 +4,7 @@
 
 Grad::Grad(string names, string IDs, string standing, string levels, string maleFemale, string dob)
 {
-  cout << "Grad object created!\n";
+  //cout << "Grad object created!\n";
   name = names;
   universityID = IDs;
   age = dob;
@@ -49,7 +49,7 @@ Grad::Grad(string names, string IDs, string standing, string levels, string male
     gender = "Unknown";
   }
 
-  cout << "name = " << name << "\nstudentID = " << universityID << "\nclassStanding = " << classStanding << "\nlevel = " << level << "\ngender = " << gender << endl << endl;
+  //cout << "name = " << name << "\nstudentID = " << universityID << "\nclassStanding = " << classStanding << "\nlevel = " << level << "\ngender = " << gender << endl << endl;
 
 }
 
@@ -73,6 +73,11 @@ void Grad::print()
   cout << "The position of the student is: " << classStanding << endl;
   cout << "The student is pursuing a degree of level: " << level << endl;
   cout << "\n";
+}
+
+string Grad::getLevel()
+{
+  return level;
 }
 
 Grad::~Grad()

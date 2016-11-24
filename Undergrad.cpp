@@ -6,7 +6,7 @@ using namespace std;
 
 Undergrad::Undergrad(string names, string IDs, string standing, string maleFemale, string dob)
 {
-  cout << "Undergrad object created!\n";
+  //cout << "Undergrad object created!\n";
   name = names;
   universityID = IDs;
   classStanding = standing;
@@ -47,7 +47,7 @@ Undergrad::Undergrad(string names, string IDs, string standing, string maleFemal
     gender = "Unknown";
   }
 
-  cout << "name = " << name << "\nstudentID = " << universityID << "\nclassStanding = " << classStanding << "\nlevel = " << level << "\ngender = " << gender << endl << endl;
+  //cout << "name = " << name << "\nstudentID = " << universityID << "\nclassStanding = " << classStanding << "\nlevel = " << level << "\ngender = " << gender << endl << endl;
 }
 
 void Undergrad::print()
@@ -62,14 +62,10 @@ void Undergrad::print()
   cout << "\n";
 }
 
-/*void Undergrad::enroll(Course &course, string CID)
+string Undergrad::getLevel()
 {
-  if(course.courseID == CID)
-  {
-    cout << "courseID == CID";
-  }
+  return level;
 }
-*/
 
 Undergrad::~Undergrad()
 {}

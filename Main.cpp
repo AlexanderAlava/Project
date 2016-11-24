@@ -196,8 +196,55 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
 
   for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4; k <= 9; k++, j+=5, m+=5, n+=5, p+=5, r+=5)
   {
-    personVec[k] = new Teacher(names[j], id[m], age[n], level[p], gender[r]);
+    teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p], gender[r]);
   }
+
+/*-----------------------PERSON ASSIGNMENT------------------------------------*/
+
+  //Assigns students to Person Vector from position 0 - 4
+  for(t = 0; t < 5; t++)
+  {
+    personVec[t] = studentVec[t];
+  }
+  //Assigns teachers to Person Vector from position 5 - 14
+  for(r = 0; r < 10; r++, t++)
+  {
+    personVec[t] = teacherVec[r];
+  }
+/*
+  cout << "Print people in personVec" << endl;
+
+  int input = 0;
+  cout << "Select a number to print. Hit ENTER to quit." << endl;
+  while (input != 100)
+  {
+    cin >> input;
+    switch (input)
+    {
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+      case 6:
+      case 7:
+      case 8:
+      case 9:
+      case 10:
+      case 11:
+      case 12:
+      case 13:
+      case 14:
+        personVec[input]->print();
+        break;
+      default:
+        input = 100;
+    }
+
+    cout << "make another selection: ";
+  }
+*/
 
 /*-----------------------COURSES ARRAY STORING--------------------------------*/
 
@@ -235,16 +282,36 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
 
 /*------------------------------TESTING---------------------------------------*/
 
-  // TESTING TO PRINT TEACHER FROM VECTOR //
-  cout << "\n\n\n\nTEACHER OBJECT PRINTED FROM VECTOR\n\n";
+  int lecturer = 0; //Keeps count so that only 1 teacher is assigned to course
+  for(t = 0; t < 15; t++)
+  {
+    if(personVec[t]->getLevel() == "BSc")
+    {
+      cout << "Setting student to course" << endl;
+      courseVec[0]->setStudents(*personVec[t]);
+    }
+    else if(personVec[t]->isTeacherAssistant())
+    {
+      cout << "Setting TA to course" << endl;
+      courseVec[0]->setTA(*personVec[t]);
+    }
+    else if(personVec[t]->isLecturer() && lecturer == 0)
+    {
+      cout << "Setting teacher to course" << endl;
+      courseVec[0]->setTeacher(*personVec[t]);
+      lecturer++;
+    }
+    else
+    {
+      continue;
+    }
+  }
 
-  //This is running the friend DISPLAY function in Course class to access the private data variable NAME in Teacher class
-  cout << "\n\n\n TESTING DISPLAY FUNCTION IN COURSE CLASS:\n";
-  //courseVec[0]->display(*teacherVec[0]);
-  cout << endl;
+  courseVec[0]->display();
 
-
-  personVec[0]->print();
+  //personVec[1]->print();
+  //cout << personVec[0]->getLevel();
+  //cout << endl;
   //teacherVec[0]->print();
 
   //succesfull program termination

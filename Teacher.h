@@ -16,14 +16,15 @@ class Teacher : public Person
 
   public:
     Teacher(string names, string IDs, string old, string type, string maleFemale);
-    std::string getType(); //Needs arguments
-    virtual void print(); //Might create a parent virtual function for use here
+    std::string getType();
+    virtual void print();
     //void print(); //testing
     bool isLecturer();
     bool isAdjunct();
     bool isProfessor();
     void setTeacherID();
     int getTeacherID();
+    virtual string getLevel(); //Possibly reduntant due to GetType in this class already. But needed since Person has this function
     ~Teacher();
 
 };

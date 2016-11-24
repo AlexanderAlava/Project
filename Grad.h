@@ -15,6 +15,7 @@ class Grad : public Student
     bool isTeacherAssistant();
     bool isPhD();
     virtual void print();
+    virtual string getLevel();
     ~Grad();
 
 };

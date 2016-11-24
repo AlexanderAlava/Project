@@ -1,7 +1,6 @@
 #ifndef COURSE_H
 #define COURSE_H
 #include<string>
-#include"Grad.h"
 #include"Undergrad.h"
 #include"Grad.h"
 #include"Teacher.h"
@@ -11,6 +10,8 @@ using namespace std;
 
 class Course
 {
+  friend class Undergrad;
+
   protected:
     string studentNames[MAX];
     string assistantNames[MAX];
@@ -22,16 +23,17 @@ class Course
 
   public:
     Course(string ID, string name, string underGrad);
-    bool isGraduate(); //Pass a Grad/Under object or just studentID to verify?
+    bool isGraduate();
     bool isTeacher();
     bool isTA();
-    char Grades(); //Needs argument? Possibly Student to pull grade for?
+    char Grades();
     string getCourseID();
-    void setTeacher(Teacher &teacher);
-    void setTA(Grad &ta);
-    //void setStudents(Undergrad &student);
+    void setTeacher(Person &teacher);
+    void setTA(Person &ta);
+    void setStudents(Person &person);
+    void display();
     ~Course();
-    //void display(Teacher &t);
+
 
 };
 

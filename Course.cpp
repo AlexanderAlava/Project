@@ -8,11 +8,11 @@ static int countTA = 0;
 static int countStudent = 0;
 Course::Course(string ID, string name, string underGrad)
 {
-  cout << "\nCourse object created!\n";
+  //cout << "\nCourse object created!\n";
   courseID = ID;
-  cout << "courseID = " << courseID << endl;
+  //cout << "courseID = " << courseID << endl;
   courseName = name;
-  cout << "courseName = " << courseName << endl;
+  //cout << "courseName = " << courseName << endl;
 
   if (underGrad == "U")
   {
@@ -22,7 +22,7 @@ Course::Course(string ID, string name, string underGrad)
   {
     level = "Graduate";
   }
-  cout << "level = " << level << endl;
+  //cout << "level = " << level << endl;
 
 }
 
@@ -55,28 +55,48 @@ string Course::getCourseID()
   return courseID;
 }
 
-void Course::setTeacher(Teacher &teacher)
+void Course::setTeacher(Person &teacher)
 {
   teacherName = teacher.name;
 }
 
-void Course::setTA(Grad &ta)
+void Course::setTA(Person &ta)
 {
   assistantNames[countTA] = ta.name;
   countTA++;
 }
 
-/*void Course::setStudents(Undergrad &student)
+void Course::setStudents(Person &person)
 {
-  studentNames[countStudent] = student.name;
+  //cout << "Inside setStudents function of Course Class" << endl;
+  studentNames[countStudent] = person.name;
+  studentIDs[countStudent] = person.universityID;
   countStudent++;
 }
 
-void Course::display(Teacher &t)
+void Course::display()
 {
-  cout << "Displayed from Teacher class: " << t.name << endl;
+  int i = 0;
+
+  cout << "Teacher for " << courseName << " is: " << teacherName << endl << endl;
+
+  cout << "Students enrolled in " << courseName << " are: " << endl;
+  while(i < countStudent)
+  {
+    cout << studentNames[i] << endl;
+    i++;
+  }
+
+  i = 0;
+  cout << "\nTA's enrolled in " << courseName << " are: " << endl;
+  while(i < countTA)
+  {
+    cout << assistantNames[i] << endl;
+    i++;
+  }
+
 }
-*/
+
 Course::~Course()
 {
   // Empty body destructor //

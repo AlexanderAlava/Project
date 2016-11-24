@@ -13,6 +13,24 @@ void Person::print()
   cout << "Maybe not needed in this class." << endl;
 }
 
+string Person::getLevel()
+{
+  string temp = "Nothing";
+  return temp;
+}
+
+bool Person::isTeacherAssistant()
+{
+  bool temp = false;
+  return temp;
+}
+
+bool Person::isLecturer()
+{
+  bool temp = false;
+  return temp;
+}
+
 Person::~Person()
 {
   // Empty body destructor //

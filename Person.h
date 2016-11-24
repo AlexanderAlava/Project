@@ -6,6 +6,7 @@ using namespace std;
 
 class Person
 {
+  friend class Course;
   protected:
     string universityID;
     string age;
@@ -14,7 +15,10 @@ class Person
 
   public:
     Person();
+    virtual string getLevel(); //Needed for PersonVec call to getLevel to work in Main
     virtual void print();
+    virtual bool isTeacherAssistant(); //Needed for PersonVec input in Course Class to work
+    virtual bool isLecturer(); //Needed for PersonVec input in Course Class to work
     ~Person();
 
 };

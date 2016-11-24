@@ -6,13 +6,13 @@ using namespace std;
 
 Department::Department(string ID, string name)
 {
-  cout << "\nDepartment object created!\n";
+  //cout << "\nDepartment object created!\n";
 
   departmentID = ID;
-  cout << "departmentID = " << departmentID << endl;
+  //cout << "departmentID = " << departmentID << endl;
 
   departmentName = name;
-  cout << "departmentName = " << departmentName << endl;
+  //cout << "departmentName = " << departmentName << endl;
 
 }
 

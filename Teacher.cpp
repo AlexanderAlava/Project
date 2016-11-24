@@ -4,7 +4,7 @@
 
 Teacher::Teacher(string names, string IDs, string old, string type, string maleFemale)
 {
-  cout << "Teacher object created!\n";
+  //cout << "Teacher object created!\n";
   name = names;
   universityID = IDs;
   age = old;
@@ -42,7 +42,7 @@ Teacher::Teacher(string names, string IDs, string old, string type, string maleF
     gender = "Unknown";
   }
 
-  cout << "name = " << name << "\nteacherID = " << universityID << "\ndate of birth = " << age << "\nteacherType = " << getType() << "\ngender = " << gender << endl << endl;
+  //cout << "name = " << name << "\nteacherID = " << universityID << "\ndate of birth = " << age << "\nteacherType = " << getType() << "\ngender = " << gender << endl << endl;
 
 
 }
@@ -103,6 +103,11 @@ void Teacher::print()
   cout << "The teacher ID is: " << universityID << endl;
   cout << "The teacher type is: " << getType() << endl;
   cout << "\n";
+}
+
+string Teacher::getLevel()
+{
+  return teacherType;
 }
 
 Teacher::~Teacher()
