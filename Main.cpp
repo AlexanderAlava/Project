@@ -40,7 +40,7 @@ int main()
 *  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
 */
 
-  int f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, m = 0, n = 0, p = 0, r = 0, s = 0;
+  int f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, m = 0, n = 0, p = 0, r = 0, s = 0, t = 0;
   string teachersArray[MAX];
   string studentsArray[MAX];
   string coursesArray[MAX];
@@ -156,7 +156,7 @@ int main()
 
 /*-----------------------STUDENT ARRAY STORING -------------------------------*/
 
-  for(j = 0, m = 1, n = 2, p = 3, r = 4, s = 5; s < i; j+=6, m+=6, n+=6, p+=6,r+=6,s+=6)
+  for(j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; t < i; j+=7, m+=7, n+=7, p+=7,r+=7,s+=7, t+=7)
   {
     names[j] = studentsArray[j];
     id[m] = studentsArray[m];
@@ -164,21 +164,22 @@ int main()
     standing[p] = studentsArray[p];
     level[r] = studentsArray[r];
     gender[s] = studentsArray[s];
+    age[t] = studentsArray[t];
 
     //cout << "names[" << j << "] = " << names[j] << " id[" << m << "] = " << id[m] << " grad[" << n << "] = " << grad[n] << " standing[" << p << "] = " << standing[p] << " level[" << r << "] = " << level[r] << " gender[" << s << "] = " << gender[s] << endl;
   }
 
 /*-----------------------STUDENT OBJECT CREATION------------------------------*/
 
-for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5; k <= 9; k++, j+=6, m+=6, n+=6, p+=6,r+=6,s+=6)
+for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, m+=7, n+=7, p+=7,r+=7,s+=7, t+=7)
 {
   if (grad[n] == "U")
   {
-    studentVec[k] = new Undergrad(names[j], id[m], standing[p], gender[s]);
+    studentVec[k] = new Undergrad(names[j], id[m], standing[p], gender[s], age[t]);
   }
   else if(grad[n] == "G")
   {
-    studentVec[k] = new Grad(names[j], id[m], standing[p], level[r], gender[s]);
+    studentVec[k] = new Grad(names[j], id[m], standing[p], level[r], gender[s], age[t]);
   }
 }
 
@@ -204,7 +205,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5; k <= 9; k++, j+=6, m+=6, n
 
 /*-----------------------COURSES ARRAY STORING--------------------------------*/
 
-  for(j = 0, m = 1, n = 2; m < g; j+=3, m+=3, n+=3) //While not the end of file, loop.
+  for(j = 0, m = 1, n = 2; n < g; j+=3, m+=3, n+=3) //While not the end of file, loop.
   {
     id[j] = coursesArray[j];
     names[m] = coursesArray[m];
