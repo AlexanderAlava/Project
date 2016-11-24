@@ -165,8 +165,6 @@ int main()
     level[r] = studentsArray[r];
     gender[s] = studentsArray[s];
     age[t] = studentsArray[t];
-
-    //cout << "names[" << j << "] = " << names[j] << " id[" << m << "] = " << id[m] << " grad[" << n << "] = " << grad[n] << " standing[" << p << "] = " << standing[p] << " level[" << r << "] = " << level[r] << " gender[" << s << "] = " << gender[s] << endl;
   }
 
 /*-----------------------STUDENT OBJECT CREATION------------------------------*/

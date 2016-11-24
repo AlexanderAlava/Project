@@ -8,7 +8,7 @@ class Student : public Person
 {
   protected:
 
-  string courseEnrolled, studentID, classStanding, level;
+  string courseEnrolled, classStanding, level;
 
   public:
     Student();
