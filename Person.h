@@ -7,7 +7,8 @@ using namespace std;
 class Person
 {
   protected:
-    int universityID, age;
+    string universityID;
+    string age;
     string name;
     string gender;
 

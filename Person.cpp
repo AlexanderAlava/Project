@@ -8,8 +8,6 @@ Person::Person()
 {
   name = "nobody";
   gender = "N/A";
-  universityID = 0000;
-  age = 0;
 }
 
 void Person::print()
