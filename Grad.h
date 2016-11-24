@@ -11,10 +11,9 @@ class Grad : public Student
 
   private:
     bool isTA, isDoctoral;
-    string name, studentID, classStanding, level;
 
   public:
-    Grad(string names, string IDs, string standing, string levels, string maleFemale);
+    Grad(string names, string IDs, string standing, string levels, string maleFemale, string dob);
     bool isTeacherAssistant();
     bool isPhD();
     virtual void print();

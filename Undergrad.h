@@ -9,12 +9,10 @@ class Undergrad : public Student
   friend class Course;
 
   private:
-    std::string name, studentID, classStanding, level;
+
 
   public:
-    Undergrad(string names, string IDs, string standing, string maleFemale);
-    void setStanding(); //Will need arguments
-    std::string getStanding();
+    Undergrad(string names, string IDs, string standing, string maleFemale, string dob);
     virtual void print();
     //void enroll(Course &course, string CID);
     ~Undergrad();

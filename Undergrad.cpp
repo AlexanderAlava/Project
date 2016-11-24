@@ -4,12 +4,13 @@
 
 using namespace std;
 
-Undergrad::Undergrad(string names, string IDs, string standing, string maleFemale)
+Undergrad::Undergrad(string names, string IDs, string standing, string maleFemale, string dob)
 {
   cout << "Undergrad object created!\n";
   name = names;
-  studentID = IDs;
+  universityID = IDs;
   classStanding = standing;
+  age = dob;
   level = "BSc";
 
   if(standing == "F")
@@ -46,12 +47,7 @@ Undergrad::Undergrad(string names, string IDs, string standing, string maleFemal
     gender = "Unknown";
   }
 
-  cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << classStanding << "\nlevel = " << level << "\ngender = " << gender << endl << endl;
-}
-
-string Undergrad::getStanding()
-{
-  return classStanding;
+  cout << "name = " << name << "\nstudentID = " << universityID << "\nclassStanding = " << classStanding << "\nlevel = " << level << "\ngender = " << gender << endl << endl;
 }
 
 void Undergrad::print()
@@ -59,8 +55,8 @@ void Undergrad::print()
   cout << "\n";
   cout << "The student name is: " << name << endl;
   //cout << "The student gender is: " << gender << endl;
-  //cout << "The student date of birth is: " << age << endl;
-  cout << "The student ID is: " << studentID << endl;
+  cout << "The student date of birth is: " << age << endl;
+  cout << "The student ID is: " << universityID << endl;
   cout << "The student class standing is: " << classStanding << endl;
   cout << "The student level is: " << level << endl;
   cout << "\n";
