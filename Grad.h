@@ -3,8 +3,6 @@
 #include<string>
 #include"Student.h"
 
-using namespace std;
-
 class Grad : public Student
 {
   friend class Course;

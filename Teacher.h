@@ -3,8 +3,6 @@
 #include<string>
 #include"Person.h"
 
-using namespace std;
-
 class Teacher : public Person
 {
   //Friend the ENTIRE Course class and all it's members

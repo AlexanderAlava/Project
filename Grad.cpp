@@ -2,8 +2,6 @@
 #include<stdlib.h>
 #include"Grad.h"
 
-using namespace std;
-
 Grad::Grad(string names, string IDs, string standing, string levels, string maleFemale, string dob)
 {
   cout << "Grad object created!\n";

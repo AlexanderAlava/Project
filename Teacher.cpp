@@ -2,8 +2,6 @@
 #include<stdlib.h>
 #include"Teacher.h"
 
-using namespace std;
-
 Teacher::Teacher(string names, string IDs, string old, string type, string maleFemale)
 {
   cout << "Teacher object created!\n";

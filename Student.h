@@ -2,8 +2,6 @@
 #define STUDENT_H
 #include"Person.h"
 
-using namespace std;
-
 class Student : public Person
 {
   protected:

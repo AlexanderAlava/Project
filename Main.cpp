@@ -16,8 +16,6 @@
 #include"Course.h"
 #define MAX 100
 
-using namespace std;
-
 int main()
 {
   cout << "Welcome user!" << endl;

@@ -2,8 +2,6 @@
 #include<stdlib.h>
 #include"Person.h"
 
-using namespace std;
-
 Person::Person()
 {
   name = "nobody";
