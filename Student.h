@@ -8,7 +8,7 @@ class Student : public Person
 {
   protected:
 
-  std::string courseEnrolled;
+  string courseEnrolled, studentID, classStanding, level;
 
   public:
     Student();
