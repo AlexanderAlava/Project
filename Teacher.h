@@ -14,7 +14,7 @@ class Teacher : public Person
     bool lecturer;
     bool adjunct;
     bool professor;
-    string name, teacherID, teacherType, age;
+    string teacherID, teacherType;
 
   public:
     Teacher(string names, string IDs, string old, string type, string maleFemale);
