@@ -51,7 +51,7 @@ Grad::Grad(string names, string IDs, string standing, string levels, string male
   }
 
   cout << "name = " << name << "\nstudentID = " << studentID << "\nclassStanding = " << classStanding << "\nlevel = " << level << "\ngender = " << gender << endl << endl;
-
+  
 }
 
 bool Grad::isTeacherAssistant()
