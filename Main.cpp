@@ -314,6 +314,20 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
   //cout << endl;
   //teacherVec[0]->print();
 
+  cout << "\n\n\nTesting get functions: " << endl;
+  cout << studentVec[1]->getName() << endl;
+  cout << studentVec[0]->getName() << endl;
+  cout << personVec[0]->getName() << endl;
+  cout << personVec[1]->getName() << endl;
+
+  cout << "\nCreating new Student Object Stevn Romeiro: " << endl;
+  Undergrad Steven("Steven Romeiro", "12345", "Se", "Ma", "02/22/1985");
+  personVec[20] = &Steven;
+
+  cout << "\nCalling print function from PersonVec:" << endl;
+  personVec[20]->print();
+  cout << "Calling level function from PersonVec:" << endl;
+  cout << personVec[20]->getLevel() << endl;
   //succesfull program termination
   return 0;
 }

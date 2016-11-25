@@ -8,6 +8,7 @@ class Undergrad : public Student
 {
   friend class Course;
   private:
+    string level;
 
 
   public:

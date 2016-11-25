@@ -19,6 +19,8 @@ class Person
     virtual void print();
     virtual bool isTeacherAssistant(); //Needed for PersonVec input in Course Class to work
     virtual bool isLecturer(); //Needed for PersonVec input in Course Class to work
+    virtual string getName();
+    virtual string getUniversityID();
     ~Person();
 
 };

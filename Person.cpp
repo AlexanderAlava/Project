@@ -31,6 +31,16 @@ bool Person::isLecturer()
   return temp;
 }
 
+string Person::getName()
+{
+  return name;
+}
+
+string Person::getUniversityID()
+{
+  return universityID;
+}
+
 Person::~Person()
 {
   // Empty body destructor //
