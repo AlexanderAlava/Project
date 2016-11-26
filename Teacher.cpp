@@ -2,6 +2,8 @@
 #include<stdlib.h>
 #include"Teacher.h"
 
+int static countCourses = 0;
+
 Teacher::Teacher(string names, string IDs, string old, string type, string maleFemale)
 {
   //cout << "Teacher object created!\n";
@@ -84,11 +86,6 @@ bool Teacher::isProfessor()
   return professor;
 }
 
-void Teacher::setTeacherID()
-{
-
-}
-
 int Teacher::getTeacherID()
 {
   return 0;
@@ -104,6 +101,14 @@ void Teacher::print()
   cout << "The teacher type is: " << getType() << endl;
   cout << "\n";
 }
+
+/* FUNCTION GIVING PROBLEM WITH FRIEND
+void Teacher::setTeacherCourse(Course &course)
+{
+  coursesName[countCourses] = course->courseName;
+  coursesIDs[countCourses] = course->courseID;
+  countCourses++;
+}*/
 
 string Teacher::getLevel()
 {
