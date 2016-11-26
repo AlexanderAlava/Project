@@ -6,13 +6,15 @@ class Student : public Person
 {
   protected:
 
-  string courseEnrolled, classStanding, level;
+  string classStanding, level;
+  string courseEnrolled[10];
 
   public:
     Student();
     void setCourse(std::string); //Will need arguments
-    std::string getCourse(); //Will need TYPE changed
+    string getCourse(); //Will need TYPE changed
     virtual void print();
+    void printCoursesEnrolled();
     ~Student();
 
 };
