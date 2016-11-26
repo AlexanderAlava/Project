@@ -74,27 +74,35 @@ void Course::setStudents(Person &person)
   countStudent++;
 }
 
-void Course::display()
+void Course::printTeachersAssigned()
 {
   int i = 0;
 
   cout << "Teacher for " << courseName << " is: " << teacherName << endl << endl;
-
-  cout << "Students enrolled in " << courseName << " are: " << endl;
-  while(i < countStudent)
+  if (countTA == 1)
   {
-    cout << studentNames[i] << endl;
-    i++;
+    cout << "\nTA enrolled in " << courseName << " is: " << endl;
+  }
+  else
+  {
+    cout << "\nTA's enrolled in " << courseName << " are: " << endl;
   }
 
-  i = 0;
-  cout << "\nTA's enrolled in " << courseName << " are: " << endl;
   while(i < countTA)
   {
     cout << assistantNames[i] << endl;
     i++;
   }
 
+}
+
+void Course::printStudentsCourse()
+{
+  cout << "Students enrolled in " << courseName << " are: " << endl;
+  for(int i = 0; i < countStudent; i++)
+  {
+    cout << studentIDs[i] << " - " << studentNames[i] << endl;
+  }
 }
 
 Course::~Course()

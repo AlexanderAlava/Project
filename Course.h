@@ -11,6 +11,7 @@ using namespace std;
 class Course
 {
   friend class Undergrad;
+  friend class Teacher;
 
   protected:
     string studentNames[MAX];
@@ -31,7 +32,8 @@ class Course
     void setTeacher(Person &teacher);
     void setTA(Person &ta);
     void setStudents(Person &person);
-    void display();
+    void printTeachersAssigned();
+    void printStudentsCourse();
     ~Course();
 
 
