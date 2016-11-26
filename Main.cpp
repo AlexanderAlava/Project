@@ -211,40 +211,8 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
   {
     personVec[t] = teacherVec[r];
   }
-/*
+
   cout << "Print people in personVec" << endl;
-
-  int input = 0;
-  cout << "Select a number to print. Hit ENTER to quit." << endl;
-  while (input != 100)
-  {
-    cin >> input;
-    switch (input)
-    {
-      case 0:
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-      case 6:
-      case 7:
-      case 8:
-      case 9:
-      case 10:
-      case 11:
-      case 12:
-      case 13:
-      case 14:
-        personVec[input]->print();
-        break;
-      default:
-        input = 100;
-    }
-
-    cout << "make another selection: ";
-  }
-*/
 
 /*-----------------------COURSES ARRAY STORING--------------------------------*/
 
@@ -275,7 +243,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
 
 /*----------------------DEPARTMENT OBJECT CREATION----------------------------*/
 
-  for (k = 0, j = 0, m = 1; k <= 9; k++, j+=2, m+=2)
+  for (k = 0, j = 0, m = 1; k <= 3; k++, j+=2, m+=2)
   {
     departmentVec[k] = new Department(id[j], names[m]);
   }
@@ -307,13 +275,6 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
     }
   }
 
-  courseVec[0]->display();
-
-  //personVec[1]->print();
-  //cout << personVec[0]->getLevel();
-  //cout << endl;
-  //teacherVec[0]->print();
-
   cout << "\n\n\nTesting get functions: " << endl;
   cout << studentVec[1]->getName() << endl;
   cout << studentVec[0]->getName() << endl;
@@ -328,6 +289,148 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
   personVec[20]->print();
   cout << "Calling level function from PersonVec:" << endl;
   cout << personVec[20]->getLevel() << endl;
+
+  /*------------------MENU FOR ALL THE NEEDED TESTS---------------------------*/
+
+  int input = 0;
+  string searchID = "";
+  bool flag = true;
+
+  cout << "Select a number to print or hit any other key to quit: " << endl << endl;
+
+  while (input != 100)
+  {
+    cout << "(1) Print information of a student object." << endl;
+    cout << "(2) Print information of a teacher object." << endl;
+    cout << "(3) Print information of a student object through a person object." << endl;
+    cout << "(4) Print information of a teacher object through a person object." << endl;
+    cout << "(5) Print student's names and ID's who are enrolled in a course." << endl;
+    cout << "(6) Print course names in which a student is enrolled in." << endl;
+    cout << "(7) Print teachers assigned to a course." << endl;
+    cout << "(8) Print courses that a teacher teaches." << endl;
+    cout << "(9) Print all teachers, students or courses in a department." << endl;
+    cout << "\nPlease enter your selection: ";
+
+    cin >> input;
+    switch (input)
+    {
+      // WORKING PROPERLY //
+      case 1:
+        cout << "Please enter the ID of the student that you want to print: ";
+        cin >> searchID;
+        for (int z = 0; z < studentVec.size(); z++)
+        {
+          if (personVec[z]->getUniversityID() == searchID)
+          {
+            personVec[z]->print();
+            flag = false;
+            break;
+          }
+        }
+        if (flag)
+        {
+          cout << "\nThe ID that you entered doesn't match any of the students in the system!\n" << endl;
+        }
+        break;
+
+      // WORKING PROPERLY //
+      case 2:
+        cout << "Please enter the ID of the teacher that you want to print: ";
+        cin >> searchID;
+        for (int z = 0; z < teacherVec.size(); z++)
+        {
+          if (teacherVec[z]->getUniversityID() == searchID)
+          {
+            teacherVec[z]->print();
+            flag = false;
+            break;
+          }
+        }
+        if (flag)
+        {
+          cout << "\nThe ID that you entered doesn't match any of the teachers in the system!\n" << endl;
+        }
+        break;
+
+      // How is this? Do we need downcasting? //
+      case 3:
+
+      // How is this? Do we need downcasting? //
+      case 4:
+
+      // WORKING PROPERLY //
+      case 5:
+        cout << "\nPlease enter the ID of the course that you want to print: ";
+        cin >> searchID;
+        for (int z = 0; z < courseVec.size(); z++)
+        {
+          if (courseVec[z]->getCourseID() == searchID)
+          {
+            courseVec[z]->printStudentsCourse();
+            flag = false;
+            break;
+          }
+        }
+          if (flag)
+          {
+            cout << "\nThe ID that you entered doesn't match any of the courses in the system!\n" << endl;
+          }
+        break;
+
+      // NEED TO DEFINE ARRAY ELEMENTS USED IN PRINT FUNCTION --> Segfault in the for loop? //
+      case 6:
+        cout << "\nPlease enter the ID of the student that you want to print: ";
+        cin >> searchID;
+        for (int z = 0; z < studentVec.size(); z++)
+        {
+          if (studentVec[z]->getUniversityID() == searchID)
+          {
+            studentVec[z]->printCoursesEnrolled();
+            flag = false;
+            break;
+          }
+        }
+
+        if (flag)
+        {
+          cout << "\nThe ID that you entered doesn't match any of the students in the system!\n" << endl;
+        }
+        break;
+
+      // WORKING PROPERLY //
+      case 7:
+        cout << "\nPlease enter the ID of the course that you want to print: ";
+        cin >> searchID;
+        for (int z = 0; z < courseVec.size(); z++)
+        {
+          if (courseVec[z]->getCourseID() == searchID)
+          {
+            courseVec[z]->printTeachersAssigned();
+            flag = false;
+            break;
+          }
+        }
+        if (flag)
+        {
+          cout << "\nThe ID that you entered doesn't match any of the courses in the system!\n" << endl;
+        }
+        break;
+
+      case 8:
+
+      case 9:
+
+      // Is this testing? //
+      case 14:
+        personVec[input]->print();
+        break;
+      default:
+        input = 100;
+    }
+  }
+
+
   //succesfull program termination
   return 0;
+
 }
