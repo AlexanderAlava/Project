@@ -67,8 +67,8 @@ void Grad::print()
 {
   cout << "\n";
   cout << "The student name is: " << name << endl;
-  //cout << "The student gender is: " << gender << endl;
-  cout << "The student date of birth is: " << age << endl;
+  cout << "The student gender is: " << gender << endl;
+  cout << "The student age is: " << age << endl;
   cout << "The student ID is: " << universityID << endl;
   cout << "The position of the student is: " << classStanding << endl;
   cout << "The student is pursuing a degree of level: " << level << endl;

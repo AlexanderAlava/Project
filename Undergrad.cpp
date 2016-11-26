@@ -54,8 +54,8 @@ void Undergrad::print()
 {
   cout << "\n";
   cout << "The student name is: " << name << endl;
-  //cout << "The student gender is: " << gender << endl;
-  cout << "The student date of birth is: " << age << endl;
+  cout << "The student gender is: " << gender << endl;
+  cout << "The student age is: " << age << endl;
   cout << "The student ID is: " << universityID << endl;
   cout << "The student class standing is: " << classStanding << endl;
   cout << "The student level is: " << level << endl;
