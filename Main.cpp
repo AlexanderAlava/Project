@@ -227,7 +227,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
 
-  for (k = 0, j = 0, m = 1, n = 2; k <= 9; k++, j+=3, m+=3, n+=3)
+  for (k = 0, j = 0, m = 1, n = 2; k <= 5; k++, j+=3, m+=3, n+=3)
   {
     courseVec[k] = new Course(id[j], names[m], level[n]);
   }
@@ -248,36 +248,63 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
   }
 
 /*------------------------------TESTING---------------------------------------*/
-/*for (int x = 0; x < 6; x++)
+for (int x = 0; x < 6; x++)
 {
     courseVec[x]->setTA(*personVec[x]);
-      cout << "Print people in personVec 6" << endl;
 }
 for (int w = 18, x = 0; w < 24; w++, x++)
 {
     courseVec[x]->setTeacher(*personVec[w]);
-      cout << "Print people in personVec 7" << endl;
 }
 for (int y = 10; y < 18; y++)
 {
     if (y < 14)
     {
-          cout << "Print people in personVec 8" << endl;
+        cout << "Print people in personVec 8" << endl;
         courseVec[0]->setStudents(*personVec[y]);
         courseVec[1]->setStudents(*personVec[y]);
         courseVec[2]->setStudents(*personVec[y]);
-        courseVec[3]->setStudents(*personVec[y]);
+        /*studentVec[y]->setCourse(courseVec[0]->getCourseName());
+        studentVec[y]->setCourse(courseVec[1]->getCourseName());
+        studentVec[y]->setCourse(courseVec[2]->getCourseName());*/
     }
     else
     {
-          cout << "Print people in personVec 9" << endl;
+        cout << "Print people in personVec 9" << endl;
+        courseVec[3]->setStudents(*personVec[y]);
         courseVec[4]->setStudents(*personVec[y]);
         courseVec[5]->setStudents(*personVec[y]);
-        courseVec[6]->setStudents(*personVec[y]);
-        courseVec[7]->setStudents(*personVec[y]);
+        /*studentVec[y]->setCourse(courseVec[3]->getCourseName());
+        studentVec[y]->setCourse(courseVec[4]->getCourseName());
+        studentVec[y]->setCourse(courseVec[5]->getCourseName());*/
     }
 }
-*/
+
+studentVec[10]->setCourse(courseVec[0]->getCourseName());
+studentVec[10]->setCourse(courseVec[1]->getCourseName());
+studentVec[10]->setCourse(courseVec[2]->getCourseName());
+studentVec[11]->setCourse(courseVec[0]->getCourseName());
+studentVec[11]->setCourse(courseVec[1]->getCourseName());
+studentVec[11]->setCourse(courseVec[2]->getCourseName());
+studentVec[12]->setCourse(courseVec[0]->getCourseName());
+studentVec[12]->setCourse(courseVec[1]->getCourseName());
+studentVec[12]->setCourse(courseVec[2]->getCourseName());
+studentVec[13]->setCourse(courseVec[0]->getCourseName());
+studentVec[13]->setCourse(courseVec[1]->getCourseName());
+studentVec[13]->setCourse(courseVec[2]->getCourseName());
+studentVec[14]->setCourse(courseVec[3]->getCourseName());
+studentVec[14]->setCourse(courseVec[4]->getCourseName());
+studentVec[14]->setCourse(courseVec[5]->getCourseName());
+studentVec[15]->setCourse(courseVec[3]->getCourseName());
+studentVec[15]->setCourse(courseVec[4]->getCourseName());
+studentVec[15]->setCourse(courseVec[5]->getCourseName());
+studentVec[16]->setCourse(courseVec[3]->getCourseName());
+studentVec[16]->setCourse(courseVec[4]->getCourseName());
+studentVec[16]->setCourse(courseVec[5]->getCourseName());
+studentVec[17]->setCourse(courseVec[3]->getCourseName());
+studentVec[17]->setCourse(courseVec[4]->getCourseName());
+studentVec[17]->setCourse(courseVec[5]->getCourseName());
+
 /*
   int lecturer = 0; //Keeps count so that only 1 teacher is assigned to course
   for(t = 0; t < 15; t++)
@@ -332,9 +359,9 @@ for (int y = 10; y < 18; y++)
   bool flag = true;
 
   //TESTING//
-  teacherVec[0]->setTeacherCourse(courseVec[0]->getCourseName(), courseVec[0]->getCourseID());
+  //teacherVec[0]->setTeacherCourse(courseVec[0]->getCourseName(), courseVec[0]->getCourseID());
   //TESTING//
-  teacherVec[0]->setTeacherCourse(courseVec[1]->getCourseName(), courseVec[1]->getCourseID());
+  //teacherVec[0]->setTeacherCourse(courseVec[1]->getCourseName(), courseVec[1]->getCourseID());
 
 
   cout << "Select a number to print or hit any other key to quit: " << endl << endl;
