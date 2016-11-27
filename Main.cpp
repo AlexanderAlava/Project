@@ -357,8 +357,6 @@ for (int y = 10; y < 18; y++)
   cout << "Grades are" << courseVec[0]->getGrades(0) << endl;
 */
 
-=======
->>>>>>> 7ca21d9ab5a3cf785cc86a505da6cf06d6371332
   /*------------------MENU FOR ALL THE NEEDED TESTS---------------------------*/
 
   int input = 0;
