@@ -20,11 +20,11 @@ int main()
 {
   cout << "Welcome user!" << endl;
 
-  vector <Student *> studentVec(10);
+  vector <Student *> studentVec(5);
   vector <Teacher *> teacherVec(10);
   vector <Course *> courseVec(10);
-  vector <Department *> departmentVec(10);
-  vector <Person *> personVec(MAX);
+  vector <Department *> departmentVec(4);
+  vector <Person *> personVec(15);
 
 /* FIX ALL OF THE COMMENTS BEFORE SUBMITTING
 *  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
@@ -275,32 +275,25 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
     }
   }
 
-  cout << "\n\n\nTesting get functions: " << endl;
-  cout << studentVec[1]->getName() << endl;
-  cout << studentVec[0]->getName() << endl;
-  cout << personVec[0]->getName() << endl;
-  cout << personVec[1]->getName() << endl;
-
-  cout << "\nCreating new Student Object Stevn Romeiro: " << endl;
-  Undergrad Steven("Steven Romeiro", "12345", "Se", "Ma", "02/22/1985");
-  personVec[20] = &Steven;
-
-  cout << "\nCalling print function from PersonVec:" << endl;
-  personVec[20]->print();
-  cout << "Calling level function from PersonVec:" << endl;
-  cout << personVec[20]->getLevel() << endl;
-
   /*------------------MENU FOR ALL THE NEEDED TESTS---------------------------*/
 
   int input = 0;
+  int keep = 0;
   string searchID = "";
+  char newInput = ' ';
   bool flag = true;
+
+  //TESTING//
+  teacherVec[0]->setTeacherCourse(courseVec[0]->getCourseName(), courseVec[0]->getCourseID());
+  //TESTING//
+  teacherVec[0]->setTeacherCourse(courseVec[1]->getCourseName(), courseVec[1]->getCourseID());
+
 
   cout << "Select a number to print or hit any other key to quit: " << endl << endl;
 
   while (input != 100)
   {
-    cout << "(1) Print information of a student object." << endl;
+    cout << "\n(1) Print information of a student object." << endl;
     cout << "(2) Print information of a teacher object." << endl;
     cout << "(3) Print information of a student object through a person object." << endl;
     cout << "(4) Print information of a teacher object through a person object." << endl;
@@ -320,9 +313,9 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
         cin >> searchID;
         for (int z = 0; z < studentVec.size(); z++)
         {
-          if (personVec[z]->getUniversityID() == searchID)
+          if (studentVec[z]->getUniversityID() == searchID)
           {
-            personVec[z]->print();
+            studentVec[z]->print();
             flag = false;
             break;
           }
@@ -330,6 +323,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
         if (flag)
         {
           cout << "\nThe ID that you entered doesn't match any of the students in the system!\n" << endl;
+          flag = true;
         }
         break;
 
@@ -349,14 +343,51 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
         if (flag)
         {
           cout << "\nThe ID that you entered doesn't match any of the teachers in the system!\n" << endl;
+          flag = true;
         }
         break;
 
-      // How is this? Do we need downcasting? //
+      // WORKING PROPERLY //
       case 3:
+        cout << "Please enter the ID of the student that you want to print: ";
+        cin >> searchID;
+        for (int z = 0; z < personVec.size(); z++)
+        {
+          if (personVec[z]->getUniversityID() == searchID)
+          {
+            personVec[z]->print();
+            flag = false;
+            break;
+          }
+        }
 
-      // How is this? Do we need downcasting? //
+      if (flag)
+      {
+        cout << "\nThe ID that you entered doesn't match any of the students in the system!\n" << endl;
+        flag = true;
+      }
+      break;
+
+      // WORKING PROPERLY //
       case 4:
+        cout << "Please enter the ID of the teacher that you want to print: ";
+        cin >> searchID;
+        for (int z = 0; z < personVec.size(); z++)
+        {
+          if (personVec[z]->getUniversityID() == searchID )
+          {
+            personVec[z]->print();
+            flag = false;
+            break;
+          }
+        }
+
+        if (flag)
+        {
+          cout << "\nThe ID that you entered doesn't match any of the teachers in the system!\n" << endl;
+          flag = true;
+        }
+      break;
 
       // WORKING PROPERLY //
       case 5:
@@ -371,10 +402,12 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
             break;
           }
         }
-          if (flag)
-          {
-            cout << "\nThe ID that you entered doesn't match any of the courses in the system!\n" << endl;
-          }
+
+        if (flag)
+        {
+          cout << "\nThe ID that you entered doesn't match any of the courses in the system!\n" << endl;
+          flag = true;
+        }
         break;
 
       // NEED TO DEFINE ARRAY ELEMENTS USED IN PRINT FUNCTION --> Segfault in the for loop? //
@@ -394,6 +427,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
         if (flag)
         {
           cout << "\nThe ID that you entered doesn't match any of the students in the system!\n" << endl;
+          flag = true;
         }
         break;
 
@@ -410,25 +444,83 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
             break;
           }
         }
+
         if (flag)
         {
           cout << "\nThe ID that you entered doesn't match any of the courses in the system!\n" << endl;
+          flag = true;
         }
         break;
 
       case 8:
+        cout << "\nPlease enter the ID of the teacher that you want to print: ";
+        cin >> searchID;
+        for (int z = 0; z < teacherVec.size(); z++)
+        {
+          if (teacherVec[z]->getUniversityID() == searchID)
+          {
+            teacherVec[z]->printTeacherCourses();
+            flag = false;
+            break;
+          }
+        }
+
+        if (flag)
+        {
+          cout << "\nThe ID that you entered doesn't match any of the teachers in the system!\n" << endl;
+          flag = true;
+        }
+        break;
 
       case 9:
+        cout << "\nPlease enter the ID of the department that you want to print: ";
+        cin >> searchID;
+        for (int z = 0; z < departmentVec.size(); z++)
+        {
+          if (departmentVec[z]->getDepartmentID() == searchID)
+          {
+            keep = z;
+            flag = false;
+            break;
+          }
+        }
 
-      // Is this testing? //
-      case 14:
-        personVec[input]->print();
+        if (!flag)
+        {
+          cout << "\nPlease select if you want to print teachers, students or courses:" << endl;
+          cout << "(a) Print all teachers.\n(b) Print all students.\n(c) Print all courses.\n";
+          cout << "Please enter your selection: ";
+          cin >> newInput;
+          tolower(newInput);
+
+          if (newInput == 'a')
+          {
+            departmentVec[keep]->printAllTeachers();
+          }
+          else if (newInput == 'b')
+          {
+            departmentVec[keep]->printAllStudents();
+          }
+          else if (newInput == 'c')
+          {
+            departmentVec[keep]->printAllCourses();
+          }
+          else
+          {
+            cout << "\nInvalid input! Returning to main menu...\n";
+          }
+        }
+        else if (flag)
+        {
+          cout << "\nThe ID that you entered doesn't match any of the departments in the system!\n" << endl;
+          flag = true;
+        }
         break;
+
       default:
         input = 100;
     }
   }
-
 
   //succesfull program termination
   return 0;
