@@ -207,10 +207,10 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 11; k++, j+=7,
     personVec[t] = studentVec[t];
   }
   //Assigns teachers to Person Vector from position 5 - 14
-  /*for(r = 0; r < 17; r++, t++)
+  for(r = 0; r < 17; r++, t++)
   {
     personVec[t] = teacherVec[r];
-  }*/
+  }
 
   cout << "Print people in personVec" << endl;
 
