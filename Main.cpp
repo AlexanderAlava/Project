@@ -20,11 +20,11 @@ int main()
 {
   cout << "Welcome user!" << endl;
 
-  vector <Student *> studentVec(18);
-  vector <Teacher *> teacherVec(6);
-  vector <Course *> courseVec(6);
-  vector <Department *> departmentVec(3);
-  vector <Person *> personVec(24);
+  vector <Student *> studentVec(5);
+  vector <Teacher *> teacherVec(10);
+  vector <Course *> courseVec(10);
+  vector <Department *> departmentVec(4);
+  vector <Person *> personVec(15);
 
 /* FIX ALL OF THE COMMENTS BEFORE SUBMITTING
 *  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
@@ -167,7 +167,7 @@ int main()
 
 /*-----------------------STUDENT OBJECT CREATION------------------------------*/
 
-for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7, m+=7, n+=7, p+=7,r+=7,s+=7, t+=7)
+for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, m+=7, n+=7, p+=7,r+=7,s+=7, t+=7)
 {
   if (grad[n] == "U")
   {
@@ -194,20 +194,20 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
 
 /*-----------------------TEACHER OBJECT CREATION------------------------------*/
 
-  for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4; k <= 5; k++, j+=5, m+=5, n+=5, p+=5, r+=5)
+  for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4; k <= 9; k++, j+=5, m+=5, n+=5, p+=5, r+=5)
   {
     teacherVec[k] = new Teacher(names[j], id[m], age[n], level[p], gender[r]);
   }
 
 /*-----------------------PERSON ASSIGNMENT------------------------------------*/
 
-  //Assigns students to Person Vector from position 0 - 17
-  for(t = 0; t < 18; t++)
+  //Assigns students to Person Vector from position 0 - 4
+  for(t = 0; t < 5; t++)
   {
     personVec[t] = studentVec[t];
   }
-  //Assigns teachers to Person Vector from position 18 - 23
-  for(r = 0; r < 24; r++, t++)
+  //Assigns teachers to Person Vector from position 5 - 14
+  for(r = 0; r < 10; r++, t++)
   {
     personVec[t] = teacherVec[r];
   }
@@ -227,7 +227,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
 
-  for (k = 0, j = 0, m = 1, n = 2; k <= 5; k++, j+=3, m+=3, n+=3)
+  for (k = 0, j = 0, m = 1, n = 2; k <= 9; k++, j+=3, m+=3, n+=3)
   {
     courseVec[k] = new Course(id[j], names[m], level[n]);
   }
@@ -243,7 +243,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
 
 /*----------------------DEPARTMENT OBJECT CREATION----------------------------*/
 
-  for (k = 0, j = 0, m = 1; k <= 2; k++, j+=2, m+=2)
+  for (k = 0, j = 0, m = 1; k <= 3; k++, j+=2, m+=2)
   {
     departmentVec[k] = new Department(id[j], names[m]);
   }
@@ -311,7 +311,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
       case 1:
         cout << "Please enter the ID of the student that you want to print: ";
         cin >> searchID;
-        for (unsigned int z = 0; z < studentVec.size(); z++)
+        for (int z = 0; z < studentVec.size(); z++)
         {
           if (studentVec[z]->getUniversityID() == searchID)
           {
@@ -331,7 +331,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
       case 2:
         cout << "Please enter the ID of the teacher that you want to print: ";
         cin >> searchID;
-        for (unsigned int z = 0; z < teacherVec.size(); z++)
+        for (int z = 0; z < teacherVec.size(); z++)
         {
           if (teacherVec[z]->getUniversityID() == searchID)
           {
@@ -351,7 +351,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
       case 3:
         cout << "Please enter the ID of the student that you want to print: ";
         cin >> searchID;
-        for (unsigned int z = 0; z < personVec.size(); z++)
+        for (int z = 0; z < personVec.size(); z++)
         {
           if (personVec[z]->getUniversityID() == searchID)
           {
@@ -372,7 +372,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
       case 4:
         cout << "Please enter the ID of the teacher that you want to print: ";
         cin >> searchID;
-        for (unsigned int z = 0; z < personVec.size(); z++)
+        for (int z = 0; z < personVec.size(); z++)
         {
           if (personVec[z]->getUniversityID() == searchID )
           {
@@ -393,7 +393,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
       case 5:
         cout << "\nPlease enter the ID of the course that you want to print: ";
         cin >> searchID;
-        for (unsigned int z = 0; z < courseVec.size(); z++)
+        for (int z = 0; z < courseVec.size(); z++)
         {
           if (courseVec[z]->getCourseID() == searchID)
           {
@@ -414,7 +414,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
       case 6:
         cout << "\nPlease enter the ID of the student that you want to print: ";
         cin >> searchID;
-        for (unsigned int z = 0; z < studentVec.size(); z++)
+        for (int z = 0; z < studentVec.size(); z++)
         {
           if (studentVec[z]->getUniversityID() == searchID)
           {
@@ -435,7 +435,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
       case 7:
         cout << "\nPlease enter the ID of the course that you want to print: ";
         cin >> searchID;
-        for (unsigned int z = 0; z < courseVec.size(); z++)
+        for (int z = 0; z < courseVec.size(); z++)
         {
           if (courseVec[z]->getCourseID() == searchID)
           {
@@ -455,7 +455,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
       case 8:
         cout << "\nPlease enter the ID of the teacher that you want to print: ";
         cin >> searchID;
-        for (unsigned int z = 0; z < teacherVec.size(); z++)
+        for (int z = 0; z < teacherVec.size(); z++)
         {
           if (teacherVec[z]->getUniversityID() == searchID)
           {
@@ -475,7 +475,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
       case 9:
         cout << "\nPlease enter the ID of the department that you want to print: ";
         cin >> searchID;
-        for (unsigned int z = 0; z < departmentVec.size(); z++)
+        for (int z = 0; z < departmentVec.size(); z++)
         {
           if (departmentVec[z]->getDepartmentID() == searchID)
           {
