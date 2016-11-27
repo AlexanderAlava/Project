@@ -210,9 +210,9 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
   for(r = 0; r < 6; r++, t++)
   {
     personVec[t] = teacherVec[r];
+    //cout << "personVec[" << t << "] = " << personVec[t] << " ::: teacherVec[" << r << "] = " << teacherVec[r] << endl;
   }
 
-  cout << "Print people in personVec" << endl;
 
 /*-----------------------COURSES ARRAY STORING--------------------------------*/
 
@@ -224,12 +224,20 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
 
     //cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c4867987a6bd1499f655112649debfdfd68a1b98
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
 
   for (k = 0, j = 0, m = 1, n = 2; k <= 5; k++, j+=3, m+=3, n+=3)
   {
     courseVec[k] = new Course(id[j], names[m], level[n]);
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c4867987a6bd1499f655112649debfdfd68a1b98
 /*-----------------------DEPARTMENT ARRAY STORING-----------------------------*/
 
   for(j = 0, m = 1; m < f; j+=2, m+=2) //While not the end of file, loop.
@@ -237,6 +245,10 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
     id[j] = departmentsArray[j];
     names[m] = departmentsArray[m];
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c4867987a6bd1499f655112649debfdfd68a1b98
 /*----------------------DEPARTMENT OBJECT CREATION----------------------------*/
 
   for (k = 0, j = 0, m = 1; k <= 3; k++, j+=2, m+=2)
@@ -328,6 +340,25 @@ studentVec[17]->setCourse(courseVec[5]->getCourseName());
     }
   }
 */
+
+/*
+  cout << "Testing course function calls" << endl;
+  cout << "Assigning student: " << endl;
+  courseVec[0]->setStudents(*personVec[0]);
+  cout << "Student name is: " << courseVec[0]->getNamesStudentsEnrolled(0) << endl;
+  courseVec[0]->setStudents(*personVec[1]);
+  cout << "Student name is: " << courseVec[0]->getNamesStudentsEnrolled(1) << endl;
+  courseVec[0]->setStudents(*personVec[2]);
+  cout << "Student name is: " << courseVec[0]->getNamesStudentsEnrolled(2) << endl;
+  courseVec[0]->setStudents(*personVec[3]);
+  cout << "Student name is: " << courseVec[0]->getNamesStudentsEnrolled(3) << endl;
+  courseVec[0]->setStudents(*personVec[4]);
+  cout << "Student name is: " << courseVec[0]->getNamesStudentsEnrolled(4) << endl;
+  cout << "Testing get grades function" << endl;
+  cout << "Getting grades for student 0" << endl;
+  cout << "Grades are" << courseVec[0]->getGrades(0) << endl;
+*/
+
   /*------------------MENU FOR ALL THE NEEDED TESTS---------------------------*/
 
   int input = 0;
