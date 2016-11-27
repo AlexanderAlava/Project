@@ -224,20 +224,14 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
 
     //cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> c4867987a6bd1499f655112649debfdfd68a1b98
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
 
   for (k = 0, j = 0, m = 1, n = 2; k <= 5; k++, j+=3, m+=3, n+=3)
   {
     courseVec[k] = new Course(id[j], names[m], level[n]);
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> c4867987a6bd1499f655112649debfdfd68a1b98
 /*-----------------------DEPARTMENT ARRAY STORING-----------------------------*/
 
   for(j = 0, m = 1; m < f; j+=2, m+=2) //While not the end of file, loop.
@@ -245,10 +239,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
     id[j] = departmentsArray[j];
     names[m] = departmentsArray[m];
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> c4867987a6bd1499f655112649debfdfd68a1b98
 /*----------------------DEPARTMENT OBJECT CREATION----------------------------*/
 
   for (k = 0, j = 0, m = 1; k <= 3; k++, j+=2, m+=2)
