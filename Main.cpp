@@ -210,7 +210,6 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
   for(r = 0; r < 6; r++, t++)
   {
     personVec[t] = teacherVec[r];
-    //cout << "personVec[" << t << "] = " << personVec[t] << " ::: teacherVec[" << r << "] = " << teacherVec[r] << endl;
   }
 
 
@@ -221,8 +220,6 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
     id[j] = coursesArray[j];
     names[m] = coursesArray[m];
     level[n] = coursesArray[n];
-
-    //cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
   }
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
@@ -315,16 +312,6 @@ for (int y = 10; y < 18; y++)
   departmentVec[2]->setStudent(studentVec[16]->getName(), studentVec[16]->getUniversityID());
   departmentVec[2]->setStudent(studentVec[17]->getName(), studentVec[17]->getUniversityID());
 
-
-cout << "Test for adding students and teachers to department" << endl;
-
-departmentVec[0]->setCourse(courseVec[0]->getCourseName(), courseVec[0]->getCourseID());
-departmentVec[0]->printAllCourses();
-departmentVec[0]->setStudent(studentVec[0]->getName(), studentVec[0]->getUniversityID());
-departmentVec[0]->printAllStudents();
-departmentVec[0]->setTeacher(teacherVec[0]->getTeacherName(), teacherVec[0]->getTeacherID());
-departmentVec[0]->printAllTeachers();
-
 /*
   int lecturer = 0; //Keeps count so that only 1 teacher is assigned to course
   for(t = 0; t < 15; t++)
@@ -370,6 +357,8 @@ departmentVec[0]->printAllTeachers();
   cout << "Grades are" << courseVec[0]->getGrades(0) << endl;
 */
 
+=======
+>>>>>>> 7ca21d9ab5a3cf785cc86a505da6cf06d6371332
   /*------------------MENU FOR ALL THE NEEDED TESTS---------------------------*/
 
   int input = 0;
@@ -377,12 +366,6 @@ departmentVec[0]->printAllTeachers();
   string searchID = "";
   char newInput = ' ';
   bool flag = true;
-
-  //TESTING//
-  //teacherVec[0]->setTeacherCourse(courseVec[0]->getCourseName(), courseVec[0]->getCourseID());
-  //TESTING//
-  //teacherVec[0]->setTeacherCourse(courseVec[1]->getCourseName(), courseVec[1]->getCourseID());
-
 
   cout << "Select a number to print or hit any other key to quit: " << endl << endl;
 
