@@ -32,6 +32,7 @@ class Course
     void setTeacher(Person &teacher);
     void setTA(Person &ta);
     void setStudents(Person &person);
+    string getCourseName();
     void printTeachersAssigned();
     void printStudentsCourse();
     ~Course();

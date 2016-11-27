@@ -74,6 +74,11 @@ void Course::setStudents(Person &person)
   countStudent++;
 }
 
+string Course::getCourseName()
+{
+  return courseName;
+}
+
 void Course::printTeachersAssigned()
 {
   int i = 0;
