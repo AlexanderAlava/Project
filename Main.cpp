@@ -255,6 +255,7 @@ for (int x = 0; x < 6; x++)
 for (int w = 18, x = 0; w < 24; w++, x++)
 {
     courseVec[x]->setTeacher(*personVec[w]);
+    teacherVec[x]->setTeacherCourse(courseVec[x]->getCourseName(), courseVec[x]->getCourseID());
 }
 for (int y = 10; y < 18; y++)
 {

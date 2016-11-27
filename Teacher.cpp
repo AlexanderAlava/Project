@@ -114,7 +114,10 @@ void Teacher::printTeacherCourses()
   cout << "This professor teaches the following courses:" << endl << endl;
   for (int i = 0; i < countCourses; i++)
   {
-    cout << coursesIDs[i] << " - " << coursesName[i] << endl;
+    if (coursesIDs[i] != "")
+    {
+      cout << coursesIDs[i] << " - " << coursesName[i] << endl;
+    }
   }
 }
 
