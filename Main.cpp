@@ -20,11 +20,11 @@ int main()
 {
   cout << "Welcome user!" << endl;
 
-  vector <Student *> studentVec(5);
-  vector <Teacher *> teacherVec(10);
+  vector <Student *> studentVec(12);
+  vector <Teacher *> teacherVec(6);
   vector <Course *> courseVec(10);
   vector <Department *> departmentVec(4);
-  vector <Person *> personVec(15);
+  vector <Person *> personVec(18);
 
 /* FIX ALL OF THE COMMENTS BEFORE SUBMITTING
 *  FIX ALL OF THE COMMENTS BEFORE SUBMITTING
@@ -167,7 +167,7 @@ int main()
 
 /*-----------------------STUDENT OBJECT CREATION------------------------------*/
 
-for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, m+=7, n+=7, p+=7,r+=7,s+=7, t+=7)
+for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 11; k++, j+=7, m+=7, n+=7, p+=7,r+=7,s+=7, t+=7)
 {
   if (grad[n] == "U")
   {
@@ -202,15 +202,15 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
 /*-----------------------PERSON ASSIGNMENT------------------------------------*/
 
   //Assigns students to Person Vector from position 0 - 4
-  for(t = 0; t < 5; t++)
+  for(t = 0; t < 12; t++)
   {
     personVec[t] = studentVec[t];
   }
   //Assigns teachers to Person Vector from position 5 - 14
-  for(r = 0; r < 10; r++, t++)
+  /*for(r = 0; r < 17; r++, t++)
   {
     personVec[t] = teacherVec[r];
-  }
+  }*/
 
   cout << "Print people in personVec" << endl;
 
@@ -224,6 +224,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
 
     //cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
   }
+    cout << "Print people in personVec 2" << endl;
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
 
@@ -232,6 +233,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
     courseVec[k] = new Course(id[j], names[m], level[n]);
   }
 
+    cout << "Print people in personVec 3" << endl;
 /*-----------------------DEPARTMENT ARRAY STORING-----------------------------*/
 
   for(j = 0, m = 1; m < f; j+=2, m+=2) //While not the end of file, loop.
@@ -240,7 +242,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
     names[m] = departmentsArray[m];
   }
 
-
+    cout << "Print people in personVec 4" << endl;
 /*----------------------DEPARTMENT OBJECT CREATION----------------------------*/
 
   for (k = 0, j = 0, m = 1; k <= 3; k++, j+=2, m+=2)
@@ -248,19 +250,23 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
     departmentVec[k] = new Department(id[j], names[m]);
   }
 
+    cout << "Print people in personVec 5" << endl;
 /*------------------------------TESTING---------------------------------------*/
-for (int x = 0; x < 6; i++)
+/*for (int x = 0; x < 6; x++)
 {
     courseVec[x]->setTA(*personVec[x]);
+      cout << "Print people in personVec 6" << endl;
 }
 for (int w = 18, x = 0; w < 24; w++, x++)
 {
     courseVec[x]->setTeacher(*personVec[w]);
+      cout << "Print people in personVec 7" << endl;
 }
-for (int y = 10; y < 18; i ++)
+for (int y = 10; y < 18; y++)
 {
     if (y < 14)
     {
+          cout << "Print people in personVec 8" << endl;
         courseVec[0]->setStudents(*personVec[y]);
         courseVec[1]->setStudents(*personVec[y]);
         courseVec[2]->setStudents(*personVec[y]);
@@ -268,13 +274,14 @@ for (int y = 10; y < 18; i ++)
     }
     else
     {
+          cout << "Print people in personVec 9" << endl;
         courseVec[4]->setStudents(*personVec[y]);
         courseVec[5]->setStudents(*personVec[y]);
         courseVec[6]->setStudents(*personVec[y]);
         courseVec[7]->setStudents(*personVec[y]);
     }
 }
-
+*/
 /*
   int lecturer = 0; //Keeps count so that only 1 teacher is assigned to course
   for(t = 0; t < 15; t++)
