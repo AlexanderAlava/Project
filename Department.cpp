@@ -22,7 +22,7 @@ Department::Department(string ID, string name)
 
 void Department::setCourseToDepartment(string name, string id, string teacher, string idTeach, string & students, string & ids)
 {
-  int j = 0;
+  unsigned int j = 0;
 
   coursesInDep[countCoursesEnrolled] = name;
   countCoursesEnrolled++;
@@ -34,7 +34,7 @@ void Department::setCourseToDepartment(string name, string id, string teacher, s
   teachersInDep[countTeachersEnrolled] = idTeach;
   countTeachersEnrolled++;
 
-  for (int i = countStudentsEnrolled; j < students.size(); j++)
+  for (unsigned int i = countStudentsEnrolled; j < students.size(); j++)
   {
     studentsInDep[i] = students[j];
     countStudentsEnrolled++;
