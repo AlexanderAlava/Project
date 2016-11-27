@@ -139,6 +139,7 @@ void Course::printStudentsCourse()
     if (studentIDs[i] != "")
     {
       cout << studentIDs[i] << " - " << studentNames[i] << endl;
+      cout << "Grade: " << studentGrades[i] << endl;
     }
   }
 }
