@@ -281,6 +281,41 @@ for (int y = 10; y < 18; y++)
     }
 }
 
+  // Setting the courses of each department //
+  departmentVec[0]->setCourse(courseVec[0]->getCourseName(), courseVec[0]->getCourseID());
+  departmentVec[0]->setCourse(courseVec[1]->getCourseName(), courseVec[1]->getCourseID());
+  departmentVec[1]->setCourse(courseVec[2]->getCourseName(), courseVec[2]->getCourseID());
+  departmentVec[1]->setCourse(courseVec[3]->getCourseName(), courseVec[3]->getCourseID());
+  departmentVec[2]->setCourse(courseVec[4]->getCourseName(), courseVec[4]->getCourseID());
+  departmentVec[2]->setCourse(courseVec[5]->getCourseName(), courseVec[5]->getCourseID());
+
+  // Setting the teachers of each department //
+  departmentVec[0]->setTeacher(teacherVec[0]->getTeacherName(), teacherVec[0]->getTeacherID());
+  departmentVec[0]->setTeacher(teacherVec[1]->getTeacherName(), teacherVec[1]->getTeacherID());
+  departmentVec[1]->setTeacher(teacherVec[2]->getTeacherName(), teacherVec[2]->getTeacherID());
+  departmentVec[1]->setTeacher(teacherVec[3]->getTeacherName(), teacherVec[3]->getTeacherID());
+  departmentVec[2]->setTeacher(teacherVec[4]->getTeacherName(), teacherVec[4]->getTeacherID());
+  departmentVec[2]->setTeacher(teacherVec[5]->getTeacherName(), teacherVec[5]->getTeacherID());
+
+  // Setting the students of each department //
+  departmentVec[0]->setStudent(studentVec[10]->getName(), studentVec[10]->getUniversityID());
+  departmentVec[0]->setStudent(studentVec[11]->getName(), studentVec[11]->getUniversityID());
+  departmentVec[0]->setStudent(studentVec[12]->getName(), studentVec[12]->getUniversityID());
+  departmentVec[0]->setStudent(studentVec[13]->getName(), studentVec[13]->getUniversityID());
+  departmentVec[1]->setStudent(studentVec[10]->getName(), studentVec[10]->getUniversityID());
+  departmentVec[1]->setStudent(studentVec[11]->getName(), studentVec[11]->getUniversityID());
+  departmentVec[1]->setStudent(studentVec[12]->getName(), studentVec[12]->getUniversityID());
+  departmentVec[1]->setStudent(studentVec[13]->getName(), studentVec[13]->getUniversityID());
+  departmentVec[1]->setStudent(studentVec[14]->getName(), studentVec[14]->getUniversityID());
+  departmentVec[1]->setStudent(studentVec[15]->getName(), studentVec[15]->getUniversityID());
+  departmentVec[1]->setStudent(studentVec[16]->getName(), studentVec[16]->getUniversityID());
+  departmentVec[1]->setStudent(studentVec[17]->getName(), studentVec[17]->getUniversityID());
+  departmentVec[2]->setStudent(studentVec[14]->getName(), studentVec[14]->getUniversityID());
+  departmentVec[2]->setStudent(studentVec[15]->getName(), studentVec[15]->getUniversityID());
+  departmentVec[2]->setStudent(studentVec[16]->getName(), studentVec[16]->getUniversityID());
+  departmentVec[2]->setStudent(studentVec[17]->getName(), studentVec[17]->getUniversityID());
+
+
 cout << "Test for adding students and teachers to department" << endl;
 
 departmentVec[0]->setCourse(courseVec[0]->getCourseName(), courseVec[0]->getCourseID());

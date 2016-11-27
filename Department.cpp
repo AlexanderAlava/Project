@@ -85,6 +85,8 @@ string Department::getDepartmentID()
 
 void Department::printAllTeachers()
 {
+  //cout << "\nHELLOOO??";
+
   for (int i = 0; i < countTeacherID; i++)
   {
     if (teacherIDInDep[i] != "")
@@ -109,6 +111,10 @@ void Department::printAllCourses()
 {
   for (int i = 0; i < countCourseID; i++)
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 466fa9d53a8b98de5367e69eab16109d0e9dc9ab
     if (courseIDInDep[i] != "")
     {
       cout << courseIDInDep[i] << " - " << courseNameInDep[i] << endl;
