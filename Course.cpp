@@ -23,7 +23,6 @@ Course::Course(string ID, string name, string underGrad)
     level = "Graduate";
   }
   //cout << "level = " << level << endl;
-
 }
 
 bool Course::isGraduate()
@@ -108,6 +107,21 @@ void Course::printStudentsCourse()
   {
     cout << studentIDs[i] << " - " << studentNames[i] << endl;
   }
+}
+
+string & Course::getNamesStudentsEnrolled()
+{
+  string *a;
+  a = &studentNames;
+  return a;
+}
+string & Course::getIDStudentsEnrolled()
+{
+  return studentIDs;
+}
+string Course::getTeacher()
+{
+  return teacherName;
 }
 
 Course::~Course()

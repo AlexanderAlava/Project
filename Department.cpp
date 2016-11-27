@@ -4,6 +4,10 @@
 
 using namespace std;
 
+int static countStudentsEnrolled = 0;
+int static countTeachersEnrolled = 0;
+int static countCoursesEnrolled = 0;
+
 Department::Department(string ID, string name)
 {
   //cout << "\nDepartment object created!\n";
@@ -13,6 +17,33 @@ Department::Department(string ID, string name)
 
   departmentName = name;
   //cout << "departmentName = " << departmentName << endl;
+
+}
+
+void Department::setCourseToDepartment(string name, string id, string teacher, string idTeach, string & students, string & ids)
+{
+  int j = 0;
+
+  coursesInDep[countCoursesEnrolled] = name;
+  countCoursesEnrolled++;
+  coursesInDep[countCoursesEnrolled] = id;
+  countCoursesEnrolled++;
+
+  teachersInDep[countTeachersEnrolled] = teacher;
+  countTeachersEnrolled++;
+  teachersInDep[countTeachersEnrolled] = idTeach;
+  countTeachersEnrolled++;
+
+  for (int i = countStudentsEnrolled; j < students.size(); j++)
+  {
+    studentsInDep[i] = students[j];
+    countStudentsEnrolled++;
+    i++;
+    j++;
+    studentsInDep[i] = students[j];
+    countStudentsEnrolled++;
+    i++;
+  }
 
 }
 

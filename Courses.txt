@@ -1,1 +1,1 @@
-CS1,Intro to Programming,U,CS2,Programming Concepts,U,CS3,Object Oriented Design,U,CS4,Data Structures,U,CA1,Computer Organization,U,CA2,Computer Logic,U,CA3,Computer Architecture,U,MAP,Differential Equations,U,LIN,Language Culture and Film,U,HSC,Medical Terminology,U,
+CS1,Programming Concepts,U,CA5,Computer Logic,G,MAP,Differential Equations,U,HLA,Higher Level Algorithms,G,HSC,Medical Terminology,G,BIO,Biological Anatomy,U,

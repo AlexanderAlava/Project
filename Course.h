@@ -11,7 +11,6 @@ using namespace std;
 class Course
 {
   friend class Undergrad;
-  friend class Teacher;
 
   protected:
     string studentNames[MAX];
@@ -29,7 +28,10 @@ class Course
     bool isTA();
     char Grades();
     string getCourseID();
+    string & getNamesStudentsEnrolled();
+    string & getIDStudentsEnrolled();
     void setTeacher(Person &teacher);
+    string getTeacher();
     void setTA(Person &ta);
     void setStudents(Person &person);
     string getCourseName();

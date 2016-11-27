@@ -22,8 +22,8 @@ int main()
 
   vector <Student *> studentVec(5);
   vector <Teacher *> teacherVec(10);
-  vector <Course *> courseVec(10);
-  vector <Department *> departmentVec(4);
+  vector <Course *> courseVec(6);
+  vector <Department *> departmentVec(3);
   vector <Person *> personVec(15);
 
 /* FIX ALL OF THE COMMENTS BEFORE SUBMITTING
@@ -227,7 +227,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
 
-  for (k = 0, j = 0, m = 1, n = 2; k <= 9; k++, j+=3, m+=3, n+=3)
+  for (k = 0, j = 0, m = 1, n = 2; k <= 5; k++, j+=3, m+=3, n+=3)
   {
     courseVec[k] = new Course(id[j], names[m], level[n]);
   }
@@ -243,7 +243,7 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 9; k++, j+=7, 
 
 /*----------------------DEPARTMENT OBJECT CREATION----------------------------*/
 
-  for (k = 0, j = 0, m = 1; k <= 3; k++, j+=2, m+=2)
+  for (k = 0, j = 0, m = 1; k <= 2; k++, j+=2, m+=2)
   {
     departmentVec[k] = new Department(id[j], names[m]);
   }
