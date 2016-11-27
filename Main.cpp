@@ -22,7 +22,7 @@ int main()
 
   vector <Student *> studentVec(18);
   vector <Teacher *> teacherVec(6);
-  vector <Course *> courseVec(10);
+  vector <Course *> courseVec(6);
   vector <Department *> departmentVec(4);
   vector <Person *> personVec(24);
 
@@ -264,9 +264,9 @@ for (int y = 10; y < 18; y++)
         courseVec[0]->setStudents(*personVec[y]);
         courseVec[1]->setStudents(*personVec[y]);
         courseVec[2]->setStudents(*personVec[y]);
-        /*studentVec[y]->setCourse(courseVec[0]->getCourseName());
+        studentVec[y]->setCourse(courseVec[0]->getCourseName());
         studentVec[y]->setCourse(courseVec[1]->getCourseName());
-        studentVec[y]->setCourse(courseVec[2]->getCourseName());*/
+        studentVec[y]->setCourse(courseVec[2]->getCourseName());
     }
     else
     {
@@ -274,36 +274,11 @@ for (int y = 10; y < 18; y++)
         courseVec[3]->setStudents(*personVec[y]);
         courseVec[4]->setStudents(*personVec[y]);
         courseVec[5]->setStudents(*personVec[y]);
-        /*studentVec[y]->setCourse(courseVec[3]->getCourseName());
+        studentVec[y]->setCourse(courseVec[3]->getCourseName());
         studentVec[y]->setCourse(courseVec[4]->getCourseName());
-        studentVec[y]->setCourse(courseVec[5]->getCourseName());*/
+        studentVec[y]->setCourse(courseVec[5]->getCourseName());
     }
 }
-
-studentVec[10]->setCourse(courseVec[0]->getCourseName());
-studentVec[10]->setCourse(courseVec[1]->getCourseName());
-studentVec[10]->setCourse(courseVec[2]->getCourseName());
-studentVec[11]->setCourse(courseVec[0]->getCourseName());
-studentVec[11]->setCourse(courseVec[1]->getCourseName());
-studentVec[11]->setCourse(courseVec[2]->getCourseName());
-studentVec[12]->setCourse(courseVec[0]->getCourseName());
-studentVec[12]->setCourse(courseVec[1]->getCourseName());
-studentVec[12]->setCourse(courseVec[2]->getCourseName());
-studentVec[13]->setCourse(courseVec[0]->getCourseName());
-studentVec[13]->setCourse(courseVec[1]->getCourseName());
-studentVec[13]->setCourse(courseVec[2]->getCourseName());
-studentVec[14]->setCourse(courseVec[3]->getCourseName());
-studentVec[14]->setCourse(courseVec[4]->getCourseName());
-studentVec[14]->setCourse(courseVec[5]->getCourseName());
-studentVec[15]->setCourse(courseVec[3]->getCourseName());
-studentVec[15]->setCourse(courseVec[4]->getCourseName());
-studentVec[15]->setCourse(courseVec[5]->getCourseName());
-studentVec[16]->setCourse(courseVec[3]->getCourseName());
-studentVec[16]->setCourse(courseVec[4]->getCourseName());
-studentVec[16]->setCourse(courseVec[5]->getCourseName());
-studentVec[17]->setCourse(courseVec[3]->getCourseName());
-studentVec[17]->setCourse(courseVec[4]->getCourseName());
-studentVec[17]->setCourse(courseVec[5]->getCourseName());
 
 /*
   int lecturer = 0; //Keeps count so that only 1 teacher is assigned to course

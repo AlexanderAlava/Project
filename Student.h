@@ -7,7 +7,7 @@ class Student : public Person
   protected:
 
   string classStanding, level;
-  string courseEnrolled[10];
+  string courseEnrolled[100];
 
   public:
     Student();

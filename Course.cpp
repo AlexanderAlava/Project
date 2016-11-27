@@ -68,7 +68,7 @@ void Course::setStudents(Person &person)
   string grade = "";
   int numericGrade = 0;
   numericGrade = rand() % 100 + 1;
-  cout << "numericGrade is: " << numericGrade << endl;
+  //cout << "numericGrade is: " << numericGrade << endl;
   if(numericGrade <= 59)
   {
     grade = "F";
@@ -93,7 +93,7 @@ void Course::setStudents(Person &person)
   {
     grade = "F";
   }
-  cout << "Letter grade was set to: " << grade << endl;
+  //cout << "Letter grade was set to: " << grade << endl;
   studentGrades[countStudent] = grade;
   //cout << "studentGrades[" << countStudent << "] = " << studentGrades[countStudent] << endl;
   countStudent++;
