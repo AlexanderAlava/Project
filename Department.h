@@ -8,9 +8,13 @@ class Department
   private:
     string departmentID;
     string departmentName;
+
   public:
     Department(string ID, string name);
     string getDepartmentID();
+    void printAllTeachers();
+    void printAllStudents();
+    void printAllCourses();
     ~Department();
 };
 

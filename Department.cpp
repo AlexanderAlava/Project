@@ -21,6 +21,21 @@ string Department::getDepartmentID()
   return departmentID;
 }
 
+void Department::printAllTeachers()
+{
+  cout << "\n\nALL TEACHERS!\n\n";
+}
+
+void Department::printAllStudents()
+{
+  cout << "\n\nALL STUDENTS!\n\n";
+}
+
+void Department::printAllCourses()
+{
+  cout << "\n\nALL COURSES!\n\n";
+}
+
 Department::~Department()
 {
   // Empty body constructor //
