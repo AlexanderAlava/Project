@@ -55,6 +55,8 @@ void Department::setCourse(string name, string id)
 {
   courseNameInDep[countCourseName] = name;
   courseIDInDep[countCourseID] = id;
+  cout << "courseNameInDep[" << countCourseName << "] = " << courseNameInDep[countCourseName] << endl;
+  cout << "courseIDInDep[" << countCourseID << "] = " << courseIDInDep[countCourseID] << endl;
   countCourseName++;
   countCourseID++;
 }

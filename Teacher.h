@@ -15,19 +15,19 @@ class Teacher : public Person
     bool adjunct;
     bool professor;
     string teacherType;
-    string coursesName[20];
-    string coursesIDs[20];
+    string coursesName[100];
+    string coursesIDs[100];
 
   public:
     Teacher(string names, string IDs, string old, string type, string maleFemale);
     std::string getType();
     virtual void print();
-    //void print(); //testing
     bool isLecturer();
     bool isAdjunct();
     bool isProfessor();
     void setTeacherID();
-    int getTeacherID();
+    string getTeacherID();
+    string getTeacherName();
     virtual string getLevel(); //Possibly reduntant due to GetType in this class already. But needed since Person has this function
     void setTeacherCourse(string courseName, string courseID);
     void printTeacherCourses();

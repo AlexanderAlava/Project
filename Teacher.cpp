@@ -86,9 +86,13 @@ bool Teacher::isProfessor()
   return professor;
 }
 
-int Teacher::getTeacherID()
+string Teacher::getTeacherID()
 {
-  return 0;
+  return universityID;
+}
+string Teacher::getTeacherName()
+{
+  return name;
 }
 
 void Teacher::print()
