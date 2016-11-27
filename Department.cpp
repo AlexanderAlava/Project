@@ -4,9 +4,12 @@
 
 using namespace std;
 
-int static countStudentsEnrolled = 0;
-int static countTeachersEnrolled = 0;
-int static countCoursesEnrolled = 0;
+int static countStudentName = 0;
+int static countStudentID = 0;
+int static countTeacherName = 0;
+int static countTeacherID = 0;
+int static countCourseName = 0;
+int static countCourseID = 0;
 
 Department::Department(string ID, string name)
 {
@@ -20,7 +23,7 @@ Department::Department(string ID, string name)
 
 }
 
-void Department::setCourseToDepartment(string name, string id, string teacher, string idTeach, string & students, string & ids)
+/*void Department::setCourseToDepartment(string name, string id, string teacher, string idTeach, string students[], string ids[])
 {
   unsigned int j = 0;
 
@@ -34,7 +37,7 @@ void Department::setCourseToDepartment(string name, string id, string teacher, s
   teachersInDep[countTeachersEnrolled] = idTeach;
   countTeachersEnrolled++;
 
-  for (unsigned int i = countStudentsEnrolled; j < students.size(); j++)
+  for (unsigned int i = countStudentsEnrolled; j < students->size(); j++)
   {
     studentsInDep[i] = students[j];
     countStudentsEnrolled++;
@@ -46,6 +49,32 @@ void Department::setCourseToDepartment(string name, string id, string teacher, s
   }
 
 }
+*/
+
+void Department::setCourse(string name, string id)
+{
+  courseNameInDep[countCourseName] = name;
+  courseIDInDep[countCourseID] = id;
+  countCourseName++;
+  countCourseID++;
+}
+
+void Department::setTeacher(string name, string id)
+{
+  teacherNameInDep[countTeacherName] = name;
+  teacherIDInDep[countTeacherID] = id;
+  countTeacherName++;
+  countTeacherID++;
+
+}
+
+void Department::setStudent(string name, string id)
+{
+  studentNameInDep[countStudentName] = name;
+  studentIDInDep[countStudentID] = id;
+  countStudentName++;
+  countStudentID++;
+}
 
 string Department::getDepartmentID()
 {
@@ -54,17 +83,35 @@ string Department::getDepartmentID()
 
 void Department::printAllTeachers()
 {
-  cout << "\n\nALL TEACHERS!\n\n";
+  for (int i = 0; i < countTeacherID; i++)
+  {
+    if (teacherIDInDep[countTeacherID] != "")
+    {
+      cout << teacherIDInDep[countTeacherID] << " - " << teacherNameInDep[countTeacherName] << endl;
+    }
+  }
 }
 
 void Department::printAllStudents()
 {
-  cout << "\n\nALL STUDENTS!\n\n";
+  for (int i = 0; i < countStudentID; i++)
+  {
+    if (studentIDInDep[countStudentID] != "")
+    {
+      cout << studentIDInDep[countStudentID] << " - " << studentNameInDep[countStudentName] << endl;
+    }
+  }
 }
 
 void Department::printAllCourses()
 {
-  cout << "\n\nALL COURSES!\n\n";
+  for (int i = 0; i < countCourseID; i++)
+  {
+    if (courseIDInDep[countCourseID] != "")
+    {
+      cout << courseIDInDep[countCourseID] << " - " << courseNameInDep[countCourseName] << endl;
+    }
+  }
 }
 
 Department::~Department()

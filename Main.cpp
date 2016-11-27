@@ -255,6 +255,7 @@ for (int x = 0; x < 6; x++)
 for (int w = 18, x = 0; w < 24; w++, x++)
 {
     courseVec[x]->setTeacher(*personVec[w]);
+    teacherVec[x]->setTeacherCourse(courseVec[x]->getCourseName(), courseVec[x]->getCourseID());
 }
 for (int y = 10; y < 18; y++)
 {
@@ -279,6 +280,10 @@ for (int y = 10; y < 18; y++)
         studentVec[y]->setCourse(courseVec[5]->getCourseName());
     }
 }
+
+cout << "Test for adding students and teachers to department" << endl;
+
+//departmentVec[0]->setCourseToDepartment(courseVec[0]->getCourseName(), courseVec[0]->getCourseID, "Jeff", "12345", names, id);
 
 /*
   int lecturer = 0; //Keeps count so that only 1 teacher is assigned to course
