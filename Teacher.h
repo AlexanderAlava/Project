@@ -29,7 +29,8 @@ class Teacher : public Person
     void setTeacherID();
     int getTeacherID();
     virtual string getLevel(); //Possibly reduntant due to GetType in this class already. But needed since Person has this function
-    // void setTeacherCourse(Course &course); FUNCTION GIVING PROBLEM WITH FRIEND
+    void setTeacherCourse(string courseName, string courseID);
+    void printTeacherCourses();
     ~Teacher();
 
 };

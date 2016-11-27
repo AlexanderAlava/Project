@@ -102,13 +102,21 @@ void Teacher::print()
   cout << "\n";
 }
 
-/* FUNCTION GIVING PROBLEM WITH FRIEND
-void Teacher::setTeacherCourse(Course &course)
+void Teacher::setTeacherCourse(string courseName, string courseID)
 {
-  coursesName[countCourses] = course->courseName;
-  coursesIDs[countCourses] = course->courseID;
+  coursesName[countCourses] = courseName;
+  coursesIDs[countCourses] = courseID;
   countCourses++;
-}*/
+}
+
+void Teacher::printTeacherCourses()
+{
+  cout << "This professor teaches the following courses:" << endl << endl;
+  for (int i = 0; i < countCourses; i++)
+  {
+    cout << coursesIDs[i] << " - " << coursesName[i] << endl;
+  }
+}
 
 string Teacher::getLevel()
 {
