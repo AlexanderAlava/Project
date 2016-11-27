@@ -4,7 +4,7 @@
 #include"Undergrad.h"
 #include"Grad.h"
 #include"Teacher.h"
-#define MAX 100
+#define MAX 200
 
 using namespace std;
 
