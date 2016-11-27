@@ -28,7 +28,7 @@ class Course
     bool isTA();
     char Grades();
     string getCourseID();
-    string & getNamesStudentsEnrolled(int index);
+    string getNamesStudentsEnrolled(int index);
     string & getIDStudentsEnrolled(int index);
     void setTeacher(Person &teacher);
     string getTeacher();

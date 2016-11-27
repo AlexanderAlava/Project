@@ -109,14 +109,13 @@ void Course::printStudentsCourse()
   }
 }
 
-string & Course::getNamesStudentsEnrolled(int index)
+string Course::getNamesStudentsEnrolled(int index)
 {
-
   return studentNames[index];
 }
 string & Course::getIDStudentsEnrolled(int index)
 {
-  return studentIDs[0];
+  return studentIDs[index];
 }
 string Course::getTeacher()
 {
