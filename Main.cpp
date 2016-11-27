@@ -210,7 +210,6 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
   for(r = 0; r < 6; r++, t++)
   {
     personVec[t] = teacherVec[r];
-    //cout << "personVec[" << t << "] = " << personVec[t] << " ::: teacherVec[" << r << "] = " << teacherVec[r] << endl;
   }
 
 
@@ -221,8 +220,6 @@ for (k = 0, j = 0, m = 1, n = 2, p = 3, r = 4, s = 5, t = 6; k <= 17; k++, j+=7,
     id[j] = coursesArray[j];
     names[m] = coursesArray[m];
     level[n] = coursesArray[n];
-
-    //cout << "id[" << j << "] = " << id[j] << " names[" << m << "] = " << names[m] << endl;
   }
 
 /*-----------------------COURSES OBJECT CREATION------------------------------*/
@@ -318,53 +315,6 @@ for (int y = 10; y < 18; y++)
 
 cout << "Test for adding students and teachers to department" << endl;
 
-//departmentVec[0]->setCourseToDepartment(courseVec[0]->getCourseName(), courseVec[0]->getCourseID, "Jeff", "12345", names, id);
-
-/*
-  int lecturer = 0; //Keeps count so that only 1 teacher is assigned to course
-  for(t = 0; t < 15; t++)
-  {
-    if(personVec[t]->getLevel() == "BSc")
-    {
-      cout << "Setting student to course" << endl;
-      courseVec[0]->setStudents(*personVec[t]);
-    }
-    else if(personVec[t]->isTeacherAssistant())
-    {
-      cout << "Setting TA to course" << endl;
-      courseVec[0]->setTA(*personVec[t]);
-    }
-    else if(personVec[t]->isLecturer() && lecturer == 0)
-    {
-      cout << "Setting teacher to course" << endl;
-      courseVec[0]->setTeacher(*personVec[t]);
-      lecturer++;
-    }
-    else
-    {
-      continue;
-    }
-  }
-*/
-
-/*
-  cout << "Testing course function calls" << endl;
-  cout << "Assigning student: " << endl;
-  courseVec[0]->setStudents(*personVec[0]);
-  cout << "Student name is: " << courseVec[0]->getNamesStudentsEnrolled(0) << endl;
-  courseVec[0]->setStudents(*personVec[1]);
-  cout << "Student name is: " << courseVec[0]->getNamesStudentsEnrolled(1) << endl;
-  courseVec[0]->setStudents(*personVec[2]);
-  cout << "Student name is: " << courseVec[0]->getNamesStudentsEnrolled(2) << endl;
-  courseVec[0]->setStudents(*personVec[3]);
-  cout << "Student name is: " << courseVec[0]->getNamesStudentsEnrolled(3) << endl;
-  courseVec[0]->setStudents(*personVec[4]);
-  cout << "Student name is: " << courseVec[0]->getNamesStudentsEnrolled(4) << endl;
-  cout << "Testing get grades function" << endl;
-  cout << "Getting grades for student 0" << endl;
-  cout << "Grades are" << courseVec[0]->getGrades(0) << endl;
-*/
-
   /*------------------MENU FOR ALL THE NEEDED TESTS---------------------------*/
 
   int input = 0;
@@ -372,12 +322,6 @@ cout << "Test for adding students and teachers to department" << endl;
   string searchID = "";
   char newInput = ' ';
   bool flag = true;
-
-  //TESTING//
-  //teacherVec[0]->setTeacherCourse(courseVec[0]->getCourseName(), courseVec[0]->getCourseID());
-  //TESTING//
-  //teacherVec[0]->setTeacherCourse(courseVec[1]->getCourseName(), courseVec[1]->getCourseID());
-
 
   cout << "Select a number to print or hit any other key to quit: " << endl << endl;
 
