@@ -261,7 +261,7 @@ for (int y = 10; y < 18; y++)
 {
     if (y < 14)
     {
-        cout << "Print people in personVec 8" << endl;
+        //cout << "Print people in personVec 8" << endl;
         courseVec[0]->setStudents(*personVec[y]);
         courseVec[1]->setStudents(*personVec[y]);
         courseVec[2]->setStudents(*personVec[y]);
@@ -271,7 +271,7 @@ for (int y = 10; y < 18; y++)
     }
     else
     {
-        cout << "Print people in personVec 9" << endl;
+        //cout << "Print people in personVec 9" << endl;
         courseVec[3]->setStudents(*personVec[y]);
         courseVec[4]->setStudents(*personVec[y]);
         courseVec[5]->setStudents(*personVec[y]);
@@ -283,7 +283,12 @@ for (int y = 10; y < 18; y++)
 
 cout << "Test for adding students and teachers to department" << endl;
 
-//departmentVec[0]->setCourseToDepartment(courseVec[0]->getCourseName(), courseVec[0]->getCourseID, "Jeff", "12345", names, id);
+departmentVec[0]->setCourse(courseVec[0]->getCourseName(), courseVec[0]->getCourseID());
+departmentVec[0]->printAllCourses();
+departmentVec[0]->setStudent(studentVec[0]->getName(), studentVec[0]->getUniversityID());
+departmentVec[0]->printAllStudents();
+departmentVec[0]->setTeacher(teacherVec[0]->getTeacherName(), teacherVec[0]->getTeacherID());
+departmentVec[0]->printAllTeachers();
 
 /*
   int lecturer = 0; //Keeps count so that only 1 teacher is assigned to course

@@ -87,9 +87,9 @@ void Department::printAllTeachers()
 {
   for (int i = 0; i < countTeacherID; i++)
   {
-    if (teacherIDInDep[countTeacherID] != "")
+    if (teacherIDInDep[i] != "")
     {
-      cout << teacherIDInDep[countTeacherID] << " - " << teacherNameInDep[countTeacherName] << endl;
+      cout << teacherIDInDep[i] << " - " << teacherNameInDep[i] << endl;
     }
   }
 }
@@ -98,9 +98,9 @@ void Department::printAllStudents()
 {
   for (int i = 0; i < countStudentID; i++)
   {
-    if (studentIDInDep[countStudentID] != "")
+    if (studentIDInDep[i] != "")
     {
-      cout << studentIDInDep[countStudentID] << " - " << studentNameInDep[countStudentName] << endl;
+      cout << studentIDInDep[i] << " - " << studentNameInDep[i] << endl;
     }
   }
 }
@@ -109,9 +109,9 @@ void Department::printAllCourses()
 {
   for (int i = 0; i < countCourseID; i++)
   {
-    if (courseIDInDep[countCourseID] != "")
+    if (courseIDInDep[i] != "")
     {
-      cout << courseIDInDep[countCourseID] << " - " << courseNameInDep[countCourseName] << endl;
+      cout << courseIDInDep[i] << " - " << courseNameInDep[i] << endl;
     }
   }
 }
