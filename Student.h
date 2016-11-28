@@ -6,19 +6,23 @@ class Student : public Person
 {
   protected:
 
+  // Declaring extra variables to be used by each object instatiated //
   string classStanding, level;
   string courseEnrolled[100];
 
   public:
+
+    // Declaring the constructor //
     Student();
-    void setCourse(std::string); //Will need arguments
-    string getCourse(); //Will need TYPE changed
-    virtual void print();
+
+    // Declaring member functions //
+    string getCourse();
+    void setCourse(string course);
     void printCoursesEnrolled();
+    virtual void print();
+
+    // Declaring the destructor //
     ~Student();
-
-
-
 };
 
 #endif

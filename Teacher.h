@@ -3,14 +3,14 @@
 #include<string>
 #include"Person.h"
 
-using namespace std;
-
 class Teacher : public Person
 {
-  //Friend the ENTIRE Course class and all it's members
+  // Declaring the Course class to be a friend of this class //
   friend class Course;
 
   private:
+
+    // Declaring extra variables to be used by each object instatiated //
     bool lecturer;
     bool adjunct;
     bool professor;
@@ -19,20 +19,25 @@ class Teacher : public Person
     string coursesIDs[100];
 
   public:
+
+    // Declaring the constructor with five different parameters //
     Teacher(string names, string IDs, string old, string type, string maleFemale);
-    std::string getType();
-    virtual void print();
+
+    // Declaring member functions //
     bool isLecturer();
     bool isAdjunct();
     bool isProfessor();
-    void setTeacherID();
+    string getType();
     string getTeacherID();
     string getTeacherName();
-    virtual string getLevel(); //Possibly reduntant due to GetType in this class already. But needed since Person has this function
+    virtual string getLevel();
+    virtual void print();
+    void setTeacherID();
     void setTeacherCourse(string courseName, string courseID);
     void printTeacherCourses();
-    ~Teacher();
 
+    // Declaring the destructor //
+    ~Teacher();
 };
 
 #endif

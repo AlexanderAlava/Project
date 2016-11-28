@@ -2,39 +2,58 @@
 #include<stdlib.h>
 #include"Student.h"
 
+// Declaring and initializing a static counter variable //
 static int courseCount = 0;
 
 Student::Student()
-{}
-
-void Student::setCourse(string course)
 {
-  // Check if course already exists? //
-
-  courseEnrolled[courseCount] = course;
-  courseCount++;
-
-  // Adding this student's name to the course object //
+  // Empty body constructor as no student objects will be instatiated //
 }
 
-/* NEEDED???
-string Student::getCourse()
+// Defining the function where course names are being stored by each student //
+void Student::setCourse(string course)
 {
-  return courseEnrolled;
-}*/
+  // Assigning the course name to an index of the array in student //
+  courseEnrolled[courseCount] = course;
 
+  // Incrementing the static variable //
+  courseCount++;
+}
+
+// Defining the print function for the courses assigned to the student //
 void Student::printCoursesEnrolled()
 {
-  for (int i = 0; i < 10; i++)
+  // Declaring and initializing a boolean variable that will serve as a flag //
+  bool flagEnrolled = true;
+
+  // Establishing a for loop that will run through all the elements in the array needed //
+  for (int i = 0; i < courseCount; i++)
   {
-    cout << courseEnrolled[i] << endl;
+    // Checking if the current index position is empty //
+    if (courseEnrolled[i] != "")
+    {
+      // Printing the information requested //
+      cout << courseEnrolled[i] << endl;
+
+      // Setting the flag to false so that the error message is not printed //
+      flagEnrolled = false;
+    }
+  }
+
+  // Checking if the courseEnrolled array is empty //
+  if (flagEnrolled)
+  {
+    // Printing an informational message //
+    cout << "\nThe student that you requested is a graduate student. Therefore, he is not enrolled as a student on any of the courses in the system!\n";
   }
 }
 
 void Student::print()
 {
-  cout << "Probably not needed here either." << endl;
+  // Empty body function //
 }
 
 Student::~Student()
-{}
+{
+  // Empty body destructor //
+}

@@ -6,23 +6,32 @@ using namespace std;
 
 class Person
 {
+  // Declaring the Course class to be a friend of this class //
   friend class Course;
+
   protected:
+
+    // Declaring the variables need for this class and all its child classes //
     string universityID;
     string age;
     string name;
     string gender;
 
   public:
+
+    // Declaring the constructor with no parameters //
     Person();
-    virtual string getLevel(); //Needed for PersonVec call to getLevel to work in Main
-    virtual void print();
-    virtual bool isTeacherAssistant(); //Needed for PersonVec input in Course Class to work
-    virtual bool isLecturer(); //Needed for PersonVec input in Course Class to work
+
+    // Declaring member functions //
+    virtual bool isTeacherAssistant();
+    virtual bool isLecturer();
     virtual string getName();
     virtual string getUniversityID();
-    ~Person();
+    virtual string getLevel();
+    virtual void print();
 
+    // Declaring the destructor //
+    ~Person();
 };
 
 #endif

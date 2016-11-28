@@ -9,9 +9,10 @@ using namespace std;
 
 class Course
 {
-  //friend class Undergrad;
 
   protected:
+
+    // Declaring the variables need for this class //
     string studentNames[MAX];
     string assistantNames[MAX];
     string studentIDs[MAX];
@@ -22,26 +23,29 @@ class Course
     string level;
 
   public:
+
+    // Declaring the constructor with three different parameters //
     Course(string ID, string name, string underGrad);
+
+    // Declaring member functions //
     bool isGraduate();
     bool isTeacher();
     bool isTA();
     char Grades();
     string getCourseID();
+    string getCourseName();
+    string getTeacher();
     string & getNamesStudentsEnrolled(int index);
     string & getIDStudentsEnrolled(int index);
-    void setTeacher(Person &teacher);
-    string getTeacher();
+    string& getGrades(int index);
     void setTA(Person &ta);
     void setStudents(Person &person);
-    string& getGrades(int index);
-    string getCourseName();
+    void setTeacher(Person &teacher);
     void printTeachersAssigned();
     void printStudentsCourse();
+
+    // Declaring the destructor //
     ~Course();
-
-
-
 };
 
 #endif

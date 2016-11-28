@@ -2,21 +2,29 @@
 #define UNDERGRAD_H
 #include<string>
 #include"Student.h"
-//#include"Course.h" //Can't have #include of Course.h header if Course.h already #includes Undergrad.h
 
 class Undergrad : public Student
 {
+  // Declaring the Course class to be a friend of this class //
   friend class Course;
+
   private:
+
+    // Declaring an extra variable needed in this class //
     string level;
 
 
   public:
-    Undergrad(string names, string IDs, string standing, string maleFemale, string dob);
-    virtual void print();
-    virtual string getLevel();
-    ~Undergrad();
 
+    // Declaring the constructor with five different parameters //
+    Undergrad(string names, string IDs, string standing, string maleFemale, string dob);
+
+    // Declaring member functions //
+    virtual string getLevel();
+    virtual void print();
+
+    // Declaring the destructor //
+    ~Undergrad();
 };
 
 #endif

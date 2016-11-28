@@ -6,6 +6,8 @@ using namespace std;
 class Department
 {
   private:
+
+    // Declaring the variables need for this class //
     string departmentID;
     string departmentName;
     string courseNameInDep[100];
@@ -16,15 +18,20 @@ class Department
     string studentIDInDep[100];
 
   public:
+
+    // Declaring the constructor with two different parameters //
     Department(string ID, string name);
+
+    // Declaring member functions //
     string getDepartmentID();
-    //void setCourseToDepartment(string name, string id, string teacher, string idTeach, string students[], string ids[]);
     void setCourse(string name, string id);
     void setTeacher(string name, string id);
     void setStudent(string name, string id);
     void printAllTeachers();
     void printAllStudents();
     void printAllCourses();
+
+    // Declaring the destructor //
     ~Department();
 };
 
