@@ -288,7 +288,7 @@ int main()
 /*----------------------DEPARTMENT OBJECT CREATION----------------------------*/
 
   // Establishing a for loop to run through all the elements of the array needed //
-  for (k = 0, j = 0, m = 1; k <= 3; k++, j+=2, m+=2)
+  for (k = 0, j = 0, m = 1; k < 3; k++, j+=2, m+=2)
   {
     // Instatiating Department object and storing into their respective vector //
     departmentVec[k] = new Department(id[j], names[m]);
@@ -320,7 +320,7 @@ int main()
 /*--------------------------------STUDENT ASSIGNMENT----------------------------------------*/
 
   // Establishing a for loop that will run through all the undergrad students //
-  for (int y = 10; y < 18; y++)
+  for (int y = 9; y < 18; y++)
   {
     // Checking if the student is one of the first four undergrad students //
     if (y < 14)
@@ -376,13 +376,15 @@ int main()
   departmentVec[2]->setTeacher(teacherVec[4]->getTeacherName(), teacherVec[4]->getTeacherID());
   departmentVec[2]->setTeacher(teacherVec[5]->getTeacherName(), teacherVec[5]->getTeacherID());
 
-  // Setting students 10 - 13 to department 0 //
+  // Setting students 9 - 13 to department 0 //
+  departmentVec[0]->setStudent(studentVec[9]->getName(), studentVec[9]->getUniversityID());
   departmentVec[0]->setStudent(studentVec[10]->getName(), studentVec[10]->getUniversityID());
   departmentVec[0]->setStudent(studentVec[11]->getName(), studentVec[11]->getUniversityID());
   departmentVec[0]->setStudent(studentVec[12]->getName(), studentVec[12]->getUniversityID());
   departmentVec[0]->setStudent(studentVec[13]->getName(), studentVec[13]->getUniversityID());
 
-  // Setting students 10 - 17 to department 1 //
+  // Setting students 9 - 17 to department 1 //
+  departmentVec[1]->setStudent(studentVec[9]->getName(), studentVec[9]->getUniversityID());
   departmentVec[1]->setStudent(studentVec[10]->getName(), studentVec[10]->getUniversityID());
   departmentVec[1]->setStudent(studentVec[11]->getName(), studentVec[11]->getUniversityID());
   departmentVec[1]->setStudent(studentVec[12]->getName(), studentVec[12]->getUniversityID());

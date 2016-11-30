@@ -32,7 +32,6 @@ class Teacher : public Person
     string getTeacherName();
     virtual string getLevel();
     virtual void print();
-    void setTeacherID();
     void setTeacherCourse(string courseName, string courseID);
     void printTeacherCourses();
 

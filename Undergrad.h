@@ -8,12 +8,6 @@ class Undergrad : public Student
   // Declaring the Course class to be a friend of this class //
   friend class Course;
 
-  private:
-
-    // Declaring an extra variable needed in this class //
-    string level;
-
-
   public:
 
     // Declaring the constructor with five different parameters //
