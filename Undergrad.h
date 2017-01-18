@@ -1,19 +1,24 @@
 #ifndef UNDERGRAD_H
 #define UNDERGRAD_H
+#include<string>
+#include"Student.h"
 
 class Undergrad : public Student
 {
-  private:
-    int studentID
-    string classStanding;
+  // Declaring the Course class to be a friend of this class //
+  friend class Course;
 
   public:
-    Undergrad();
-    void setStanding(); //Will need arguments
-    string getStanding();
-    void printUndergrad();
-    ~Undergrad();
 
+    // Declaring the constructor with five different parameters //
+    Undergrad(string names, string IDs, string standing, string maleFemale, string dob);
+
+    // Declaring member functions //
+    virtual string getLevel();
+    virtual void print();
+
+    // Declaring the destructor //
+    ~Undergrad();
 };
 
 #endif

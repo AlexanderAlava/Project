@@ -1,17 +1,28 @@
 #ifndef STUDENT_H
 #define STUDENT_H
+#include"Person.h"
 
 class Student : public Person
 {
-  private:
+  protected:
 
+  // Declaring extra variables to be used by each object instatiated //
+  string classStanding, level;
+  string courseEnrolled[100];
 
   public:
-    Student();
-    void setCourse(); //Will need arguments
-    void getCourse(); //Will need TYPE changed
-    ~Student();
 
+    // Declaring the constructor //
+    Student();
+
+    // Declaring member functions //
+    string getCourse();
+    void setCourse(string course);
+    void printCoursesEnrolled();
+    virtual void print();
+
+    // Declaring the destructor //
+    ~Student();
 };
 
 #endif
